@@ -1,0 +1,38 @@
+<body ng-app="Device" class="ng-app:Device" id="ng-app" ng-controller="DeviceController" data-ng-init="getListAll('1');getSelections()">
+	<div class="wrap">
+		<h2>设备列表</h2>
+		<div class="table">
+			<table border="0" cellspacing="1">
+				<tr>
+					<th>设备类型</th>
+					<th>设备名称</th>
+					<th>设备编号</th>
+					<th>品牌</th>
+				</tr>
+				<tr ng-repeat="device in Devices">
+					<td>{{device.type}}</td>
+					<td>{{device.name}}</td>
+					<td>{{device.code}}</td>
+					<td>{{device.brand}}</td>
+				</tr>
+			</table>
+		</div>
+		<div class="page clearfix">
+			<a href="#" class="data-export">导出报表</a>
+			<div paging page-object="pageing" click-function="getListAll"></div>
+		</div>
+	</div>
+	<div class="wrap">
+		<h2>添加设备</h2>
+		<div class="set-info">
+			<ul>
+				<li><span>设备名称：</span>
+				<select ng-model="Device.deviceCatalogId" ng-options="DevCat.id as DevCat.nameCat.name for DevCat in DevCatSelections">
+						<option value="">-- 请选择 --</option>
+					</select></li>
+				<li><span>设备编号：</span><input ng-model="Device.code" type="text" /></li>
+				<li><span>&nbsp</span> <a href="" class="big-but" ng-click="addDevice()">添加</a>
+			</ul>
+		</div>
+	</div>
+</body>

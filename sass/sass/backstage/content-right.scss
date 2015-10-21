@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+@import "../common/import.scss";
+
+html, body, .content {
+	width: 100%;
+	height: 100%;
+}
+.contents{
+	.search{
+		width: 100%;
+		height: 200px;
+	}
+	.content{
+		width: 100%;
+		height: auto;
+	}
+	.table{
+		a{
+			text-decoration: none;
+		}
+	}
+}
+
+@media all and (min-width: $screen-min-width) {
+	.form-horizontal{
+		.form-group{
+			float: left;
+			width: (100% / 2);
+		}
+	}
+}
+
+@media all and (min-width: $screen-mid-width) {
+	.form-horizontal{
+		.form-group{
+			float: left;
+			width: (100% / 3);
+		}
+	}
+}
+
+@media all and (min-width: $screen-max-width) {
+	.form-horizontal{
+		.form-group{
+			float: left;
+			width: (100% / 4);
+		}
+	}
+}
+

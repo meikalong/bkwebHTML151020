@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="./jquery-1.11.2.min.js"></script>
+	<script src="./jquery.vlidate.js"></script>
+	<script src="./jquery.validate.messages_cn.js"></script>
+</head>
+<body>
+	<form id="frmV" method="get" action="">
+		<div id="divtest">
+			<div class="title">
+				<span class="fl">表单验证插件</span>
+				<span class="fr">
+					<input id="btnSubmit" type="button" value="提交"></span>
+			</div>
+			<div class="content">
+				<span class="fl">邮箱：</span>
+				<br>
+				<input name="email" type="text" class="error" placeholder="电子邮件">
+				<span class="tip">
+					<label for="email" generated="true" class="error"></label>
+				</span>
+				<input name="username" type="text" class="error" placeholder="用户名" required>
+				<span class="tip">
+					<label for="email" generated="true" class="usernameerror"></label>
+				</span>
+				<br>
+			</div>
+		</div>
+	</form>
+	<script type="text/javascript">
+        $(function () {
+            $("#frmV").validate(
+              {
+                  /*自定义验证规则*/
+                  rules: {
+                      email: {
+                        email: true
+                      },
+                       username: {
+                        required: true
+                      }
+                  },
+                  /*错误提示位置*/
+                  errorPlacement: function (error, element) {
+                    console.log(error);
+                    console.log(element);
+                    error.appendTo(".usernameerror");
+                  }
+              }
+            );
+        });
+    </script>
+
+	<style>#divtest
+{
+    width: 282px;
+}
+#divtest .title
+{
+    padding: 8px;
+    background-color: blue;
+    color: #fff;
+    height: 23px;
+    line-height: 23px;
+    font-size: 15px;
+    font-weight: bold;
+}
+#divtest .content
+{
+    padding: 8px 0px;
+    background-color: #fff;
+    font-size: 13px;
+}
+#divtest .content .tip
+{
+    color: Red;
+    font-size: 12px;
+}
+.fl
+{
+    float: left;
+}
+.fr
+{
+    float: right;
+}</style>
+</body>
+</html>

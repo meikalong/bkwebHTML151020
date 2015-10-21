@@ -1,0 +1,181 @@
+@charset "UTF-8";
+@import "../common/import.scss";
+$content-left-width: 185px;
+
+/* ********head部分开始******* */
+.head, .footer {
+	@media all and (max-width:$screen-mid-width) {
+		width: $screen-mid-width;
+	}
+	@media all and (min-width:$screen-mid-width) {
+		width: 100%;
+	}
+}
+.head{
+	height: 50px;
+	background-color: #212326;
+}
+.head-left {
+	.log {
+		float: left;
+		width: 24px;
+		overflow: hidden;
+		margin-left: 30px;
+		padding-top: 5px;
+	}
+	.log-msg {
+		color: white;
+		margin: 0px;
+		padding-top: 15px;
+		float: left;
+	}
+	float: left;
+	@extend %beforeAndAfter;
+}
+.head-right {
+	float: right;
+	@extend %beforeAndAfter;
+}
+.user-img {
+	float: left;
+}
+.user-msg {
+	height: 100%;
+	text-align: center;
+	position: relative;
+	float: right;
+
+	span {
+		color: white;
+		height: 50px;
+		padding: 13px 50px 13px 30px;
+		display: block;
+		font-size: 15px;
+		font-family: $ff;
+		position: relative;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	span > .img {
+		position: absolute;
+		height: 20px;
+		width: 14px;
+		top: 15px;
+		right: 25px;
+		background-image: url("../../img/portlet-collapse-icon.png");
+	}
+}
+.dropdown-menu {
+	right: 9px;
+	left: auto;
+	top: 50px;
+}
+.user-msg-menu {
+	display: none;
+}
+
+/* ********head部分结束******* */
+
+/* ********content部分开始******* */
+
+.content, .content-left, .content-right {
+	height: 700px;
+}
+.content {
+	@extend %beforeAndAfter;
+	width: 100%;
+	position: relative;
+}
+
+/********left开始****ps:主要就是树状机构*******/
+.content-left {
+	position: absolute;
+	background-color: #3E3F41;
+	width: $content-left-width;
+	overflow-y: auto;
+}
+.content-left-menu {
+	clear: both;
+
+	li {
+		a {
+			color: white;
+			position: relative;
+
+			&:hover {
+				background-color: #6E849E;
+			}
+		}
+		a + ul {
+			display: none;
+		}
+		a[class~="menu-father"] + ul {
+			li {
+				a {
+					padding-left: 15px;
+				}
+				a[class^="menu-father"] + ul {
+					li {
+						a {
+							padding-left: 30px;
+						}
+					}
+				}
+			}
+		}
+		a[class~="menu-open"] {
+			background-color: #1E1E21;
+		}
+		&:last-child {
+			border-bottom: 1px solid #293038;
+		}
+	}
+	.menu-father {
+		border-top: 1px solid #293038;
+
+		a:last-child {
+			border-bottom: 10px solid #293038;
+		}
+	}
+	.font-ico {
+		&:first-child {
+			padding-right: 7px;
+		}
+		&:last-child {
+			position: absolute;
+			right: 15px;
+			top: 13px;
+		}
+	}
+}
+
+/********left结束***********/
+
+/************right开始***********/
+.content-right {
+	background-color: #E6E6E6;
+	margin-left: $content-left-width;
+
+	@media all and (max-width:$screen-mid-width) {
+		width: $screen-mid-width - $content-left-width;
+	}
+	@media all and (min-width:$screen-mid-width) {
+		width: auto;
+	}
+}
+
+/************right结束***********/
+
+/* ********content部分结束******* */
+
+/* ********footer部分结束******* */
+
+.footer {
+	@extend %beforeAndAfter;
+	background-color: #CEDDFA;
+	height: 60px;
+}
+
+/* ********footer部分结束******* */

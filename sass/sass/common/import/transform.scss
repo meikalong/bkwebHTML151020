@@ -1,0 +1,7 @@
+@mixin transform2D($trans2D) {
+	transform: $trans;
+	-ms-transform: $trans;		/* IE 9 */
+	-webkit-transform: $trans;	/* Safari and Chrome */
+	-o-transform: $trans;		/* Opera */
+	-moz-transform: $trans;		/* Firefox */
+}

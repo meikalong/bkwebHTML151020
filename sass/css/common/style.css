@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/*
+IMPORT
+...................mixin.scss;函数集中文件
+...................variable.scss;变量集中文件
+...................tag.scss;标签集中文件
+...................raster.scss;栅格集中文件
+
+*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-family: Braggadocio, Arial, verdana, Helvetica, sans-serif;
+  line-height: 1.42857143;
+  background-color: white;
+}
