@@ -50,6 +50,7 @@
 			<div class="table-responsive">
 				<table class="table table-hover table-border table-striped table-title">
 					<tr>
+						<th>序号</th>
 						<th>姓名</th>
 						<th>性别</th>
 						<th>年龄</th>
@@ -58,26 +59,14 @@
 						<th>联系电话</th>
 						<th>操作</th>
 					</tr>
-					<tr style="display: none;">
-						<td>{{user.name}}</td>
-						<td>{{user.sex}}</td>
-						<td>{{user.age}}</td>
-						<td>{{user.birthday}}</td>
-						<td>{{user.card}}</td>
-						<td>{{user.phone}}</td>
-						<td>
-							<a href="##">增</a>
-							<a href="##">删</a>
-							<a href="##">查</a>
-						</td>
-					</tr>
-					<tr class="table_tr" ng-repeat="user in users" style="display: none;">
-						<td>{{user.name}}</td>
-						<td>{{user.sex}}</td>
-						<td>{{user.age}}</td>
-						<td>{{user.birthday}}</td>
-						<td>{{user.card}}</td>
-						<td>{{user.phone}}</td>
+					<tr class="table_tr" ng-repeat="user in users">
+						<td><span ng-bind="$index+1"></span></td>
+						<td><span ng-bind="user.name"></span></td>
+						<td><span ng-bind="user.sex"></span></td>
+						<td><span ng-bind="user.age"></span></td>
+						<td><span ng-bind="user.birthday"></span></td>
+						<td><span ng-bind="user.card"></span></td>
+						<td><span ng-bind="user.phone"></span></td>
 						<td>
 							<a href="##">增</a>
 							<a href="##">删</a>

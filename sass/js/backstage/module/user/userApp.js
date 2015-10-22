@@ -1,4 +1,4 @@
-define("userApp", ["angular"], function(angular) {
+define("app", ["angular"], function(angular) {
 	var app = angular.module('userApp', ["ngRoute"]);
 	return app;
 })

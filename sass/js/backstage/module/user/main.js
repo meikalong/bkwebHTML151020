@@ -14,19 +14,22 @@ require.config({
 		'angular-route': {
 			deps: ["angular"],
 			exports: 'angular-route'
-		},
-		"urlArgs": "bust=" + (new Date()).getTime()
-	}
+		}
+	},
+	//禁止缓存
+	"urlArgs": "bust=" + (new Date()).getTime()
 });
 
 require.config({
 	paths: {
-		"userApp": ["./backstage/module/user/userApp"],
-		"userCtrl": ["./backstage/module/user/controller/UserCtrl"]
+		"app": ["./backstage/module/user/userApp"],
+		"userCtrl": ["./backstage/module/user/controller/UserCtrl"],
+		//service
+		"crudService":["./backstage/common/CrudService"]
 	}
 });
 
-require(["jquery", 'angular', 'angular-route', "userApp", "userCtrl"], function($, angular) {
+require(["jquery", 'angular', 'angular-route', "app", "userCtrl"], function($, angular) {
 	$(function() {
 		angular.bootstrap(document, ["userApp"]);
 	})
