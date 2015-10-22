@@ -3,17 +3,16 @@ require.config({
 	paths: {
 		"jquery": ["./jquery_1.7.2"],
 		"angular": ["./angular"],
-		"angular-route": ["./angular-route"]
-			// "angular-sanitize": ["./angular-sanitize"]
+		"ui-router": ["./angular-ui-router"]
 	},
 	//这个配置是你在引入依赖的时候的包名
 	shim: {
 		"angular": {
 			exports: "angular"
 		},
-		'angular-route': {
+		'ui-router': {
 			deps: ["angular"],
-			exports: 'angular-route'
+			exports: 'ui-router'
 		}
 	},
 	//禁止缓存
@@ -22,14 +21,17 @@ require.config({
 
 require.config({
 	paths: {
+		//app
 		"app": ["./backstage/module/user/userApp"],
+		//controller
 		"userCtrl": ["./backstage/module/user/controller/UserCtrl"],
-		//service
-		"crudService":["./backstage/common/CrudService"]
+		//common-service
+		"crudService": ["./backstage/common/CrudService"]
 	}
 });
 
-require(["jquery", 'angular', 'angular-route', "app", "userCtrl"], function($, angular) {
+require(["jquery", 'angular', 'ui-router', "app", "userCtrl"], function($, angular, a) {
+	// console.log(a);
 	$(function() {
 		angular.bootstrap(document, ["userApp"]);
 	})
