@@ -40,7 +40,7 @@
 					<input type="reset" class="btn btn-primary" value="重置"></div>
 			</form>
 		</div>
-		<div class="content">
+		<div class="content" ng-controller="userCtrl">
 			<div class="table-responsive">
 				<table class="table table-hover table-border table-striped table-title">
 					<tr>
@@ -58,5 +58,5 @@
 	</div>
 </body>
 <!-- Async属性表明文件需要异步加载，IE不支持这个属性，只支持defer，所以上面把这2个属性都加上。 -->
-<script type="text/javascript" src="../../js/requirejs_2.1.11.js" data-main="../../js/backstage/main"></script>
+<script type="text/javascript" src="../../js/requirejs_2.1.11.js" data-main="../../js/backstage/module/user/main"></script>
 </html>
