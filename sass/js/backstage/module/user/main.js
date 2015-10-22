@@ -14,12 +14,8 @@ require.config({
 		'angular-route': {
 			deps: ["angular"],
 			exports: 'angular-route'
-		}
-		/*,
-				'angular-sanitize': {
-					deps: ["angular"],
-					exports: 'angular-sanitize'
-				},*/
+		},
+		"urlArgs": "bust=" + (new Date()).getTime()
 	}
 });
 
