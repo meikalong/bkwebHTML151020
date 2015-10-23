@@ -5,8 +5,6 @@
 	<title>门户</title>
 	<link rel="stylesheet" type="text/css" href="../../css/common/index.css">
 	<link rel="stylesheet" type="text/css" href="../../css/company/index.css">
-	<script type="text/javascript" src="../../js/jquery_1.7.2.js"></script>
-	<script type="text/javascript" src="../../js/common/pageswitch.js"></script>
 	<style type="text/css">
 		html,body{
 			height: 100%;
@@ -15,7 +13,7 @@
 	</style>
 </head>
 <body>
-	<ul class="nav head justified">
+	<ul class="nav head justified" ui-view>
 		<li>
 			<input type="radio" name="menu" checked="checked">
 			<a href="##">首页</a>
@@ -49,8 +47,8 @@
 			<a href="##">关于我们</a>
 		</li>
 	</ul>
-	<div id="container">
-		<div class="section active" id="section0">
+	<div id="container" ui-view="">
+		<!-- <div class="section active" id="section0">
 			<div class="intro">
 				<h1 class="title">switchPage</h1>
 				<p>Create Beautiful Fullscreen Scrolling Websites</p>
@@ -62,7 +60,7 @@
 				<p>HTML markup example to define 4 sections</p>
 				<img src="../../img/example.png"/>
 			</div>
-
+		
 		</div>
 		<div class="section" id="section2">
 			<div class="intro">
@@ -78,15 +76,17 @@
 					Everything will be okay in the end. If it's not okay, it's not the end.
 				</p>
 			</div>
-		</div>
+		</div> -->
 	</div>
-	<script type="text/javascript">
-		$(function(){
-			$("#container").switchPage({
-				'keyboard' : true,
-				'direction' : 'vertical'
-			});
-		});
-	</script>
 </body>
+<script type="text/javascript" src="../../js/jquery_1.7.2.js"></script>
+<script type="text/javascript" src="../../js/common/pageswitch.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#container").switchPage({
+			'keyboard' : true,
+			'direction' : 'vertical'
+		});
+	});
+</script>
 </html>
