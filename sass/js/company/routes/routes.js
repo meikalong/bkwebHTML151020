@@ -5,6 +5,7 @@ define(["app"], function(app) {
 		$stateProvider.state("index", {
 			url: "/index",
 			templateUrl: "./indexPage/index.html"
+				// controller: 'Controller'
 		}).state("css", {
 			url: "/css",
 			views: {
@@ -20,6 +21,9 @@ define(["app"], function(app) {
 			views: {
 				"page": {
 					templateUrl: "./aboutPage/index.html"
+						// controller: function($scope) {
+						// 	$scope.things = ["A", "Set", "Of", "Things"];
+						// }
 				}
 			}
 		}).state("css.bootstrapMenu", {
