@@ -24,15 +24,23 @@ require.config({
 		//app
 		"app": ["./company/app"],
 		//route
-		"routes": ["./company/routes/routes"]
-			//controller
-			// "userCtrl": ["./backstage/module/user/controller/UserCtrl"],
-			//common-service
-			// "crudService": ["./backstage/common/CrudService"]
+		"routes": ["./company/routes/routes"],
+		//controller
+		// "userCtrl": ["./backstage/module/user/controller/UserCtrl"],
+		//common-service
+		// "crudService": ["./backstage/common/CrudService"]
+		//switch
+		"pageSwitch": ["./common/pageswitch"]
+	},
+	shim: {
+		'pageSwitch': {
+			deps: ["jquery"],
+			exports: 'pageSwitch'
+		}
 	}
 });
 
-require(["jquery", 'angular', 'ui-router', "app", "routes"], function($, angular, a) {
+require(["jquery", 'angular', 'ui-router', "app", "routes", "pageSwitch"], function($, angular, a) {
 	$(function() {
 		angular.bootstrap(document, ["app"]);
 	})
