@@ -1,5 +1,4 @@
 define(["app"], function(app) {
-
 	return app.config(function($stateProvider, $urlRouterProvider) {
 		$urlRouterProvider.otherwise('/index');
 		$stateProvider.state("index", {
