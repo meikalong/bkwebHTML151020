@@ -1,0 +1,55 @@
+<!-- a html for angular-ui -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>门户</title>
+	<link rel="stylesheet" type="text/css" href="../../css/common/index.css">
+	<link rel="stylesheet" type="text/css" href="../../css/company/index.css">
+	<link rel="stylesheet" type="text/css" href="../../css/animate.css">
+	<style type="text/css">
+		html,body{
+			height: 100%;
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<ul class="nav head justified">
+		<li>
+			<input type="radio" name="menu" ui-sref="index"/>
+			<a>首页</a>
+		</li>
+		<li>
+			<input type="radio" name="menu" ui-sref="css">
+			<a>CSS</a>
+		</li>
+		<li>
+			<input type="radio" name="menu" ui-sref="bootStrap">
+			<a>BootStrap</a>
+		</li>
+		<li>
+			<input type="radio" name="menu" ui-sref="js">
+			<a>JavaScript</a>
+		</li>
+		<li>
+			<input type="radio" name="menu" ui-sref="productShow">
+			<a>产品展示</a>
+		</li>
+		<li>
+			<input type="radio" name="menu" ui-sref="fenxi">
+			<a>案例分析</a>
+		</li>
+		<li>
+			<input type="radio" name="menu" ui-sref="contactUs">
+			<a>联系我们</a>
+		</li>
+		<li>
+			<input type="radio" name="menu" ui-sref="about">
+			<a>关于我们</a>
+		</li>
+	</ul>
+	<div id="container" ui-view></div>
+</body>
+	<script type="text/javascript" src="../../js/requirejs_2.1.11.js" data-main="../../js/company/homeMain"></script>
+</html>

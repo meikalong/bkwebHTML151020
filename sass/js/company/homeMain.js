@@ -25,10 +25,12 @@ require.config({
 		"app": ["./company/app"],
 		//route
 		"routes": ["./company/routes/routes"],
-		//全屏切换控件
-		// "pageSwitch": ["./common/pageswitch"],
-		//响应式导航
-		"responsive_nav": ["./common/responsive-nav"]
+		//controller
+		// "userCtrl": ["./backstage/module/user/controller/UserCtrl"],
+		//common-service
+		// "crudService": ["./backstage/common/CrudService"]
+		//switch
+		"pageSwitch": ["./common/pageswitch"]
 	},
 	shim: {
 		'pageSwitch': {
@@ -38,11 +40,8 @@ require.config({
 	}
 });
 
-require(["jquery", 'angular', 'ui-router', "app", "routes", "responsive_nav"], function($, angular, a) {
+require(["jquery", 'angular', 'ui-router', "app", "routes", "pageSwitch"], function($, angular, a) {
 	$(function() {
-		$(".nav_menu").load("./common/index_top.html",function(){
-			var navigation = responsiveNav(".nav-collapse");
-		});
 		angular.bootstrap(document, ["app"]);
 	})
 

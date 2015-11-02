@@ -3,23 +3,23 @@ define(["app"], function(app) {
 		$urlRouterProvider.otherwise('/index');
 		$stateProvider.state("index", {
 			url: "/index",
-			templateUrl: "./indexPage/index.html"
+			templateUrl: "./ui/indexPageIndex.html"
 				// controller: 'Controller'
 		}).state("css", {
 			url: "/css",
 			views: {
 				"": {
-					templateUrl: "./cssPage/index.html"
+					templateUrl: "./ui/cssPageIndex.html"
 				},
 				"jsPage@css": {
-					templateUrl: "./jsPage/index.html"
+					templateUrl: "./ui/jsPageIndex.html"
 				}
 			}
 		}).state("css.aboutMenu", {
 			url: "/about",
 			views: {
 				"page": {
-					templateUrl: "./aboutPage/index.html"
+					templateUrl: "./ui/aboutPageIndex.html"
 						// controller: function($scope) {
 						// 	$scope.things = ["A", "Set", "Of", "Things"];
 						// }
@@ -29,27 +29,27 @@ define(["app"], function(app) {
 			url: "/bootstrap",
 			views: {
 				"page": {
-					templateUrl: "./bootstrapPage/index.html"
+					templateUrl: "./ui/bootstrapPageIndex.html"
 				}
 			}
 		}).state("bootStrap", {
 			url: "/bootStrap",
-			templateUrl: "./bootStrapPage/index.html"
+			templateUrl: "./ui/bootStrapPageIndex.html"
 		}).state("js", {
 			url: "/js",
-			templateUrl: "./jsPage/index.html"
+			templateUrl: "./ui/jsPageIndex.html"
 		}).state("productShow", {
 			url: "/productShow",
-			templateUrl: "./productShowPage/index.html"
+			templateUrl: "./ui/productShowPageIndex.html"
 		}).state("fenxi", {
 			url: "/fenxi",
-			templateUrl: "./fenxiPage/index.html"
+			templateUrl: "./ui/fenxiPageIndex.html"
 		}).state("contactUs", {
 			url: "/contactUs",
-			templateUrl: "./contactUsPage/index.html"
+			templateUrl: "./ui/contactUsPageIndex.html"
 		}).state("about", {
 			url: "/about",
-			templateUrl: "./aboutPage/index.html"
+			templateUrl: "./ui/aboutPageIndex.html"
 		});
 
 	})
