@@ -1,7 +1,50 @@
-.nav_menu:before, .top:before, .nav_menu:after, .top:after {
+.nav_menu:before, .top:before, .footer:before, .nav_menu:after, .top:after, .footer:after {
   display: table;
   content: "";
   clear: both;
+}
+
+.main li a {
+  color: white;
+  font-weight: bold;
+}
+.main li a:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.nav_menu {
+  height: 70px;
+  float: right;
+  padding-top: 13px;
+  padding-right: 30px;
+}
+
+.top {
+  height: 72px;
+  background-color: #AFA6B9;
+}
+
+.log {
+  height: 70px;
+  float: left;
+  width: 120px;
+  background: url("../../../img/love_travel.png") no-repeat;
+}
+@media screen and (min-width: 992px) {
+  .log {
+    margin-left: 60px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .log {
+    margin-left: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .log {
+    display: none;
+  }
 }
 
 .header {
@@ -11,19 +54,64 @@
   background-position: 0px -100px;
 }
 
+.content {
+  padding-top: 50px;
+}
+
+.photo_title {
+  margin: 0 auto;
+  display: block;
+  width: 25%;
+}
+
+.photo_title_msg {
+  text-align: center;
+}
+
+.photo_show {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .da-thumbs li {
+    width: 99%;
+  }
+
+  .photo_show {
+    height: 450px;
+  }
+}
 @media screen and (min-width: 768px) {
-  .main li a {
-    color: black;
-    font-weight: bold;
+  .da-thumbs li {
+    width: 48%;
   }
-  .main li a:hover {
-    cursor: pointer;
+
+  .photo_show {
+    height: 250px;
   }
 }
-.nav_menu {
+@media screen and (min-width: 992px) {
+  .da-thumbs li {
+    width: 48%;
+  }
+
+  .photo_show {
+    height: 320px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .da-thumbs li {
+    width: 32%;
+  }
+
+  .photo_show {
+    height: 280px;
+  }
+}
+.footer {
+  width: 100%;
   height: 70px;
-  float: right;
-}
-.nav_menu .main {
-  margin-top: 10px;
+  border-top: 2px solid #F1F1F1;
+  margin-top: 50px;
+  text-align: center;
 }

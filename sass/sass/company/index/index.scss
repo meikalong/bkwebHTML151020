@@ -2,33 +2,123 @@
 @import "../../common/import/variable.scss";
 @import "../../common/import/base.scss";
 
+// top部分开始
+.main li a {
+	//导航栏中字体的颜色
+	color: white;
+	font-weight: bold;
+
+	&:hover {
+		cursor: pointer;
+		//鼠标放上去后导航栏字体的颜色
+		color: black;
+	}
+}
+.nav_menu {
+	height: 70px;
+	float: right;
+	@extend %beforeAndAfter;
+	padding-top: 13px;
+	padding-right: 30px;
+}
+.top {
+	height: 72px;
+	@extend %beforeAndAfter;
+	background-color: #AFA6B9;
+}
+.log {
+	height: 70px;
+	float: left;
+	width: 120px;
+	background: url("../../../img/love_travel.png") no-repeat;
+
+	@media screen and (min-width:$screen-mid-width) {
+		margin-left: 60px;
+	}
+	@media screen and (max-width:$screen-mid-width) {
+		margin-left: 30px;
+	}
+	@media screen and (max-width:$screen-min-width) {
+		display: none;
+	}
+}
+// top部分结束
+
+// head部分开始
 .header {
 	width: 100%;
 	height: 700px;
 	background: url("../../../img/lvyou.jpg") no-repeat;
 	background-position: 0px -100px;
 }
+// head部分结束
+
+// 内容部分开始
+.content {
+	padding-top: 50px;
+}
+.photo_title {
+	margin: 0 auto;
+	display: block;
+	width: 25%;//设置字体图片宽度的同时就是设置字体图片的大小
+}
+.photo_title_msg {
+	text-align: center;
+}
+//图片的大小问题，就在这个地方进行调整
+.photo_show {
+	width: 100%;
+	//图片的宽度
+}
+@media screen and (max-width:$screen-min-width) {
+	.da-thumbs li {
+		width: 99%;
+		//通过li的宽度限制图片的宽度
+	}
+	.photo_show {
+		height: 450px;
+		//图片的高度
+	}
+}
 @media screen and (min-width:$screen-min-width) {
-	.main li a {
-		//导航栏中字体的颜色
-		color: black;
-		font-weight: bold;
-
-		&:hover {
-			cursor: pointer;
-		}
+	.da-thumbs li {
+		width: 48%;
+		//通过li的宽度限制图片的宽度
+	}
+	.photo_show {
+		height: 250px;
+		//图片的高度
 	}
 }
+@media screen and (min-width:$screen-mid-width) {
+	.da-thumbs li {
+		width: 48%;
+		//通过li的宽度限制图片的宽度
+	}
+	.photo_show {
+		height: 320px;
+		//图片的高度
+	}
+}
+@media screen and (min-width:$screen-max-width) {
+	.da-thumbs li {
+		width: 32%;
+		//通过li的宽度限制图片的宽度
+	}
+	.photo_show {
+		height: 280px;
+		//图片的高度
+	}
+}
+// 内容部分结束
 
-.nav_menu{
+// 底部开始
+.footer{
+	@extend %beforeAndAfter;
+	width: 100%;
 	height: 70px;
-	float: right;
-	@extend %beforeAndAfter;
-	.main{
-		margin-top: 10px;
-	}
+	border-top: 2px solid #F1F1F1;
+	margin-top: 50px;
+	text-align: center;
 }
-
-.top{
-	@extend %beforeAndAfter;
-}
+// 底部结束

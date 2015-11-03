@@ -28,21 +28,30 @@ require.config({
 		//全屏切换控件
 		// "pageSwitch": ["./common/pageswitch"],
 		//响应式导航
-		"responsive_nav": ["./common/responsive-nav"]
+		"responsive_nav": ["./common/responsive-nav"],
+		// 方向悬停特效
+		"hoverdir": ["./common/jquery.hoverdir"]
 	},
 	shim: {
-		'pageSwitch': {
+		'hoverdir': {
 			deps: ["jquery"],
-			exports: 'pageSwitch'
+			exports: 'hoverdir'
 		}
 	}
 });
 
-require(["jquery", 'angular', 'ui-router', "app", "routes", "responsive_nav"], function($, angular, a) {
+require(["jquery", 'angular', 'ui-router', "app", "routes", "responsive_nav", "hoverdir"], function($, angular, a) {
 	$(function() {
-		$(".nav_menu").load("./common/index_top.html",function(){
-			var navigation = responsiveNav(".nav-collapse");
+		//导入公共导航栏
+		$(".nav_menu").load("./common/index_top.html", function() {
+			//创建响应式菜单
+			responsiveNav(".nav-collapse", {
+				label: '<span class="icon-menu font-ico"></span>'
+			});
 		});
+		// 创建方向悬停特效
+		$('#da-thumbs > li').hoverdir();
+		// 启动angularjs
 		angular.bootstrap(document, ["app"]);
 	})
 
