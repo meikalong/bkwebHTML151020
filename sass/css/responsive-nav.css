@@ -74,5 +74,6 @@ DEMO PAGE'S STYLES
   text-decoration: none;
   font-size: 40px;
   text-align: center;
-  color: white;
+  /*菜单兰的颜色*/
+  color: black;
 }

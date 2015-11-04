@@ -5,7 +5,7 @@
 // top部分开始
 .main li a {
 	//导航栏中字体的颜色
-	color: white;
+	color: black;
 	font-weight: bold;
 
 	&:hover {
@@ -24,7 +24,9 @@
 .top {
 	height: 72px;
 	@extend %beforeAndAfter;
-	background-color: #AFA6B9;
+	//导航栏的背景色
+	background-color: white;
+	box-shadow: 0px 1px 4px #ccc;
 }
 .log {
 	height: 70px;
@@ -46,10 +48,11 @@
 
 // head部分开始
 .header {
-	width: 100%;
+	width: 90%;
 	height: 700px;
 	background: url("../../../img/lvyou.jpg") no-repeat;
 	background-position: 0px -100px;
+	margin: 0 auto;
 }
 // head部分结束
 
