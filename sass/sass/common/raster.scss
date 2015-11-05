@@ -9,6 +9,7 @@
  	width: 100%;
  	min-height: 1px;
 	@extend %beforeAndAfter;
+
 }
 
 @include commonCreate_col($col-number);

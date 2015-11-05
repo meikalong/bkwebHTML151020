@@ -60,10 +60,12 @@
 .content {
 	padding-top: 50px;
 }
+// 图片墙部分开始
 .photo_title {
 	margin: 0 auto;
 	display: block;
-	width: 25%;//设置字体图片宽度的同时就是设置字体图片的大小
+	width: 25%;
+	//设置字体图片宽度的同时就是设置字体图片的大小
 }
 .photo_title_msg {
 	text-align: center;
@@ -75,28 +77,27 @@
 }
 @media screen and (max-width:$screen-min-width) {
 	.da-thumbs li {
-		width: 99%;
 		//通过li的宽度限制图片的宽度
+		width: 99%;
 	}
 	.photo_show {
-		height: 450px;
 		//图片的高度
+		height: 450px;
 	}
 }
 @media screen and (min-width:$screen-min-width) {
 	.da-thumbs li {
-		width: 48%;
 		//通过li的宽度限制图片的宽度
+		width: 48%;
 	}
 	.photo_show {
-		height: 250px;
 		//图片的高度
+		height: 250px;
 	}
 }
 @media screen and (min-width:$screen-mid-width) {
 	.da-thumbs li {
 		width: 48%;
-		//通过li的宽度限制图片的宽度
 	}
 	.photo_show {
 		height: 320px;
@@ -106,21 +107,40 @@
 @media screen and (min-width:$screen-max-width) {
 	.da-thumbs li {
 		width: 32%;
-		//通过li的宽度限制图片的宽度
 	}
 	.photo_show {
 		height: 280px;
-		//图片的高度
+	}
+}
+// 图片墙部分结束
+.togo_msg {
+	margin-top: 60px;
+}
+.togo_content {
+	display: block;
+	width: 100%;
+	text-align: center;
+	&:hover{
+		.title{
+			color: #9f9acf;
+		}
+	}
+	.title {
+		display: block;
+		width: 100%;
+	}
+	.msg {
+		font-size: 16px;
 	}
 }
 // 内容部分结束
 
 // 底部开始
-.footer{
+.footer {
 	@extend %beforeAndAfter;
 	width: 100%;
 	height: 70px;
-	border-top: 2px solid #F1F1F1;
+	box-shadow: 0px -2px 5px #ccc;
 	margin-top: 50px;
 	text-align: center;
 }
