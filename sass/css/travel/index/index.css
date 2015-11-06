@@ -1,0 +1,193 @@
+@charset "UTF-8";
+/*
+IMPORT
+...................mixin.scss;函数集中文件
+...................variable.scss;变量集中文件
+...................tag.scss;标签集中文件
+...................raster.scss;栅格集中文件
+
+*/
+.top:before, .header:before, .column:before, .photo_wall:before, .content-msg:before, .content-msg .content-title:before, .content-msg .content-info:before, .top:after, .header:after, .column:after, .photo_wall:after, .content-msg:after, .content-msg .content-title:after, .content-msg .content-info:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+body {
+  min-width: 1200px;
+}
+
+.top {
+  width: 100%;
+  background-color: #F5F5F5;
+}
+.top .log {
+  display: block;
+  float: left;
+  width: 140px;
+  padding: 0px 30px 0px 30px;
+}
+.top ul {
+  float: left;
+}
+.top a {
+  color: black;
+  font-weight: bolder;
+}
+.top .login {
+  float: right;
+  line-height: 3;
+  padding-right: 40px;
+}
+.top .login a {
+  text-decoration: none;
+}
+.top .login a:hover {
+  color: blue;
+}
+
+.header {
+  background: -webkit-linear-gradient(top, #4CC873, #13C0A3);
+  /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(bottom, #4CC873, #13C0A3);
+  /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(bottom, #4CC873, #13C0A3);
+  /* Firefox 3.6 - 15 */
+  background: linear-gradient(to bottom, #4CC873, #13C0A3);
+  /* 标准的语法 */
+  width: 100%;
+  height: 150px;
+}
+.header .img {
+  text-align: center;
+  padding-top: 35px;
+}
+.header .log {
+  width: 150px;
+}
+.header .search {
+  padding-top: 60px;
+}
+.header .search input[type="text"] {
+  height: 50px;
+  border-radius: 30px;
+}
+.header .search input[type="button"] {
+  height: 50px;
+}
+
+.column {
+  width: 100%;
+  background-color: #00BCD4;
+  padding-left: 30px;
+}
+.column a {
+  font-weight: bold;
+  color: white;
+}
+.column li {
+  margin: 0px;
+}
+.column li a:hover {
+  background-color: #555555;
+  border-radius: 0px;
+}
+
+.photo_wall {
+  width: 100%;
+}
+.photo_wall .photo {
+  height: 420px;
+}
+
+#index_content {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.content-msg li a {
+  color: #636363;
+  font-weight: 600;
+  border-radius: 0px;
+  border: 0px;
+}
+.content-msg .title {
+  float: left;
+}
+.content-msg .title h1 {
+  font-family: "Hiragino Sans GB", "Microsoft YaHei", \9ED1\4F53, \5b8b\4f53, sans-serif;
+  font-weight: 700;
+}
+.content-msg .title .exp {
+  color: #777;
+  font-size: 16px;
+  font-weight: 100;
+}
+.content-msg .content-column {
+  float: right;
+  padding-top: 25px;
+}
+.content-msg .more {
+  font-size: 10px;
+  padding-top: 13px;
+}
+.content-msg .more a {
+  color: #777;
+}
+.content-msg .more a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.title-1 .content-title {
+  border-bottom: 2px solid #16C1A0;
+}
+.title-1 li a {
+  padding-bottom: 3px;
+}
+.title-1 li a:hover {
+  background-color: transparent;
+  color: #16C1A0;
+  border-bottom: 3px solid #16C1A0;
+}
+.title-1 .selected {
+  color: #16C1A0;
+  border-bottom: 3px solid #16C1A0;
+}
+
+.title-2 .content-title {
+  border-bottom: 2px solid #EFAD08;
+}
+.title-2 li a:hover {
+  background-color: #EFAD08;
+  color: white;
+}
+.title-2 .selected {
+  background-color: #EFAD08;
+  color: white;
+}
+
+.title-3 li a {
+  padding-bottom: 3px;
+}
+.title-3 li a:hover {
+  background-color: transparent;
+  color: #9C79CB;
+  border-bottom: 3px solid #9C79CB;
+}
+.title-3 .selected {
+  color: #9C79CB;
+  border-bottom: 3px solid #9C79CB;
+}
+
+.info-list li {
+  width: 286px;
+  height: 200px;
+  overflow: hidden;
+}
+.info-list li a {
+  height: 100%;
+  width: 100%;
+}
+
+/*# sourceMappingURL=index.css.map */

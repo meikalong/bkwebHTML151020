@@ -1,0 +1,211 @@
+@charset "UTF-8";
+@import "../../common/import.scss";
+$index-main-min-width: 1200px;
+
+body {
+	min-width: $index-main-min-width;
+}
+.top {
+	@extend %beforeAndAfter;
+	width: 100%;
+
+	.log {
+		display: block;
+		float: left;
+		width: 140px;
+		padding: 0px 30px 0px 30px;
+	}
+	ul {
+		float: left;
+	}
+	background-color: #F5F5F5;
+
+	a {
+		color: black;
+		font-weight: bolder;
+	}
+	.login {
+		float: right;
+		line-height: 3;
+		padding-right: 40px;
+
+		a {
+			text-decoration: none;
+
+			&:hover {
+				color: blue;
+			}
+		}
+	}
+}
+.header {
+	@extend %beforeAndAfter;
+	@include linearGradients(top, bottom, #4CC873, #13C0A3);
+	width: 100%;
+	height: 150px;
+
+	.img {
+		text-align: center;
+		padding-top: 35px;
+	}
+	.log {
+		width: 150px;
+	}
+	.search {
+		padding-top: 60px;
+
+		input[type="text"] {
+			height: 50px;
+			border-radius: 30px;
+		}
+		input[type="button"] {
+			height: 50px;
+		}
+	}
+}
+.column {
+	@extend %beforeAndAfter;
+	width: 100%;
+	background-color: #00BCD4;
+	padding-left: 30px;
+
+	a {
+		font-weight: bold;
+		color: white;
+	}
+	li {
+		margin: 0px;
+
+		a {
+			&:hover {
+				background-color: #555555;
+				border-radius: 0px;
+			}
+		}
+	}
+}
+.photo_wall {
+	@extend %beforeAndAfter;
+	width: 100%;
+
+	.photo {
+		height: 420px;
+	}
+}
+#index_content {
+	margin: 0 auto;
+	width: $index-main-min-width;
+}
+.content-msg {
+	@extend %beforeAndAfter;
+
+	.content-title {
+		@extend %beforeAndAfter;
+	}
+	li a{
+		color: #636363;
+		font-weight: 600;
+		border-radius: 0px;
+		border: 0px;
+	}
+	.title {
+		float: left;
+
+		h1 {
+			font-family: "Hiragino Sans GB", "Microsoft YaHei", \9ED1\4F53, \5b8b\4f53, sans-serif;
+			font-weight: 700;
+		}
+		.exp {
+			color: #777;
+			font-size: 16px;
+			font-weight: 100;
+		}
+	}
+	.content-column {
+		float: right;
+		padding-top: 25px;
+	}
+	.more {
+		font-size: 10px;
+		padding-top: 13px;
+
+		a {
+			color: #777;
+			&:hover {
+				color: blue;
+				text-decoration: underline;
+			}
+		}
+	}
+	.content-info {
+		@extend %beforeAndAfter;
+	}
+}
+// 内容导航栏主题一
+.title-1 {
+	$title-color:#16C1A0;
+	.content-title{
+		border-bottom: 2px solid $title-color;
+	}
+	li a {
+		padding-bottom: 3px;
+
+		&:hover {
+			background-color: transparent;
+			color: $title-color;
+			border-bottom: 3px solid $title-color;
+		}
+	}
+	.selected {
+		color: $title-color;
+		border-bottom: 3px solid $title-color;
+	}
+}
+// 内容导航栏主题二
+.title-2 {
+	$title-color:#EFAD08;
+	.content-title{
+		border-bottom: 2px solid $title-color;
+	}
+	li a {
+
+		&:hover {
+			background-color: $title-color;
+			color: white;
+		}
+	}
+	.selected {
+		background-color: $title-color;
+		color: white;
+	}
+}
+// 内容导航栏主题三
+.title-3 {
+	$title-color:#9C79CB;
+	li a {
+		padding-bottom: 3px;
+
+		&:hover {
+			background-color: transparent;
+			color: $title-color;
+			border-bottom: 3px solid $title-color;
+		}
+	}
+	.selected {
+		color: $title-color;
+		border-bottom: 3px solid $title-color;
+	}
+}
+// 这个是列表样式
+.info-list {
+	li {
+		width: 286px;
+		height: 200px;
+		overflow: hidden;
+
+		a {
+			height: 100%;
+			width: 100%;
+		}
+	}
+}

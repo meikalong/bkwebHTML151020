@@ -9,38 +9,48 @@ IMPORT
 */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
-  line-height: 1.1; }
+  line-height: 1.1;
+}
 
 h1, h2, h3 {
   margin-top: 20px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+}
 
 h4, h5, h6 {
   margin-top: 10px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+}
 
 h1 {
-  font-size: 36px; }
+  font-size: 36px;
+}
 
 h2 {
-  font-size: 30px; }
+  font-size: 30px;
+}
 
 h3 {
-  font-size: 24px; }
+  font-size: 24px;
+}
 
 h4 {
-  font-size: 18px; }
+  font-size: 18px;
+}
 
 h5 {
-  font-size: 14px; }
+  font-size: 14px;
+}
 
 h6 {
-  font-size: 12px; }
+  font-size: 12px;
+}
 
 h1 small, h2 small, h3 small,
 h4 small, h5 small, h6 small {
   font-size: 65%;
-  color: #777; }
+  color: #777;
+}
 
 input, button, select, textarea {
   font-family: inherit;
@@ -48,24 +58,34 @@ input, button, select, textarea {
   line-height: inherit;
   margin: 0;
   font: inherit;
-  color: inherit; }
-  input[readonly], input[disabled], button[readonly], button[disabled], select[readonly], select[disabled], textarea[readonly], textarea[disabled] {
-    cursor: not-allowed; }
-  input[disabled], button[disabled], select[disabled], textarea[disabled] {
-    cursor: not-allowed;
-    background-color: #eee; }
+  color: inherit;
+}
+input[readonly], input[disabled], button[readonly], button[disabled], select[readonly], select[disabled], textarea[readonly], textarea[disabled] {
+  cursor: not-allowed;
+}
+input[disabled], button[disabled], select[disabled], textarea[disabled] {
+  cursor: not-allowed;
+  background-color: #eee;
+}
 
 table {
   border-spacing: 0px;
-  border-collapse: collapse; }
+  border-collapse: collapse;
+}
 
 label {
   display: inline-block;
   max-width: 100%;
   margin-bottom: 5px;
-  font-weight: 700; }
+  font-weight: 700;
+}
 
 a {
-  color: #337ab7; }
+  color: #337ab7;
+  text-decoration: none;
+}
+a:hover {
+  color: blue;
+}
 
 /*# sourceMappingURL=tag.css.map */
