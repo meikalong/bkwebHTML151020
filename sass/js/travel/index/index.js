@@ -87,6 +87,7 @@ require(["jquery", 'angular', 'ui-router', "app", "hoverdir", "slides"], functio
 		$("#index_content_6").load("./content/cxzn.html", function() {
 			getList("#content_info_cxzn");
 		});
+		$("#index_footer").load("./footer/footer.html");
 	})
 
 })

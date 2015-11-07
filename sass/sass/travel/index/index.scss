@@ -102,7 +102,7 @@ body {
 	.content-title {
 		@extend %beforeAndAfter;
 	}
-	li a{
+	li a {
 		color: #636363;
 		font-weight: 600;
 		border-radius: 0px;
@@ -131,6 +131,7 @@ body {
 
 		a {
 			color: #777;
+
 			&:hover {
 				color: blue;
 				text-decoration: underline;
@@ -143,8 +144,9 @@ body {
 }
 // 内容导航栏主题一
 .title-1 {
-	$title-color:#16C1A0;
-	.content-title{
+	$title-color: #16C1A0;
+
+	.content-title {
 		border-bottom: 2px solid $title-color;
 	}
 	li a {
@@ -163,12 +165,12 @@ body {
 }
 // 内容导航栏主题二
 .title-2 {
-	$title-color:#EFAD08;
-	.content-title{
+	$title-color: #EFAD08;
+
+	.content-title {
 		border-bottom: 2px solid $title-color;
 	}
 	li a {
-
 		&:hover {
 			background-color: $title-color;
 			color: white;
@@ -181,7 +183,8 @@ body {
 }
 // 内容导航栏主题三
 .title-3 {
-	$title-color:#9C79CB;
+	$title-color: #9C79CB;
+
 	li a {
 		padding-bottom: 3px;
 
@@ -207,5 +210,67 @@ body {
 			height: 100%;
 			width: 100%;
 		}
+	}
+}
+.footer {
+	width: 100%;
+	height: 250px;
+	background-color: #333333;
+	padding-top: 50px;
+	padding-left: 130px;
+	position: relative;
+
+	ul li {
+		padding-bottom: 10px;
+	}
+	ul li:first-child {
+		padding-bottom: 15px;
+		font-weight: 700;
+	}
+	li {
+		a {
+			color: white;
+			font-size: 15px;
+			display: inline;
+
+			&:hover {
+				background-color: transparent;
+				color: #31a5e7;
+			}
+		}
+		span {
+			color: white;
+			font-size: 15px;
+			padding: 10px;
+		}
+	}
+	.app {
+		position: absolute;
+		top: 0px;
+		right: 130px;
+		text-align: center;
+
+		.icon {
+			font-size: 30px;
+			width: 60px;
+			height: 100px;
+			display: block;
+			padding-top: 15px;
+			color: white;
+			background-image: url("../../../img/app-bg.png");
+
+			span {
+				display: block;
+			}
+			.icon-app {
+				font: 12px/1.5 "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", \5b8b\4f53, sans-serif;
+				font-size: 16px;
+				padding-top: 10px;
+			}
+		}
+	}
+	.travel-msg {
+		font: 12px/1.5 "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", \5b8b\4f53, sans-serif;
+		color: white;
 	}
 }
