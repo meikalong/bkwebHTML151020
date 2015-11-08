@@ -26,7 +26,9 @@ require.config({
 		// 方向悬停特效
 		"hoverdir": ["./common/jquery.hoverdir"],
 		// 图片无缝轮播
-		"slides": ["./common/jquery.slides"]
+		"slides": ["./common/jquery.slides"],
+		// 图片延迟加载
+		"imgLazyload": ["./common/jquery.imglazyload"]
 	},
 	shim: {
 		'hoverdir': {
@@ -36,11 +38,15 @@ require.config({
 		'slides': {
 			deps: ["jquery"],
 			exports: 'slides'
+		},
+		'imgLazyload': {
+			deps: ["jquery"],
+			exports: 'imgLazyload'
 		}
 	}
 });
 
-require(["jquery", 'angular', 'ui-router', "app", "hoverdir", "slides"], function($, angular) {
+require(["jquery", 'angular', 'ui-router', "app", "hoverdir", "slides", "imgLazyload"], function($, angular) {
 	$(function() {
 		// 启动angularjs
 		// angular.bootstrap(document, ["app"]);
@@ -66,7 +72,9 @@ require(["jquery", 'angular', 'ui-router', "app", "hoverdir", "slides"], functio
 		var getList = function(target) {
 			$(target).load("./common/list.html", function() {
 				// 创建方向悬停特效
-				$('.da-thumbs li').hoverdir();
+				$(this).find('.da-thumbs li').hoverdir();
+				// 创建图片延迟加载
+				$(this).find("img.imglazy").lazyload();
 			});
 		}
 		$("#index_content_1").load("./content/xsyh.html", function() {
