@@ -145,6 +145,7 @@ body {
 // 内容导航栏主题一
 .title-1 {
 	$title-color: #16C1A0;
+	border-bottom: 2px solid $title-color;
 
 	.content-title {
 		border-bottom: 2px solid $title-color;
@@ -166,6 +167,7 @@ body {
 // 内容导航栏主题二
 .title-2 {
 	$title-color: #EFAD08;
+	border-bottom: 2px solid $title-color;
 
 	.content-title {
 		border-bottom: 2px solid $title-color;

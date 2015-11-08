@@ -139,6 +139,9 @@ body {
   text-decoration: underline;
 }
 
+.title-1 {
+  border-bottom: 2px solid #16C1A0;
+}
 .title-1 .content-title {
   border-bottom: 2px solid #16C1A0;
 }
@@ -155,6 +158,9 @@ body {
   border-bottom: 3px solid #16C1A0;
 }
 
+.title-2 {
+  border-bottom: 2px solid #EFAD08;
+}
 .title-2 .content-title {
   border-bottom: 2px solid #EFAD08;
 }
