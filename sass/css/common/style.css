@@ -12,21 +12,16 @@ IMPORT
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0px;
-  padding: 0px;
-}
+  padding: 0px; }
 
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 body {
   font-size: 14px;
   font-family: Braggadocio, Arial, verdana, Helvetica, sans-serif;
   line-height: 1.42857143;
-  background-color: white;
-}
-
-/*# sourceMappingURL=style.css.map */
+  background-color: white; }

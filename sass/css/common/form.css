@@ -22,55 +22,44 @@ IMPORT
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-}
-.form .form-control:focus, .form-horizontal .form-control:focus {
-  border-color: #66afe9;
-  outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
-}
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; }
+  .form .form-control:focus, .form-horizontal .form-control:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
 
 .form-group:before, .form-group:after {
   display: table;
   content: "";
-  clear: both;
-}
+  clear: both; }
 
 /*******form-表单********/
 .form-horizontal .control-label {
   padding-top: 7px;
-  text-align: right;
-}
-@media (min-width: 768px) {
-  .form-horizontal .control-label {
-    margin-bottom: 0;
-  }
-}
+  text-align: right; }
+  @media (min-width: 768px) {
+    .form-horizontal .control-label {
+      margin-bottom: 0; } }
 
 .form-group {
-  margin-bottom: 5px;
-}
-.form-group .help {
-  color: #666666;
-}
+  margin-bottom: 5px; }
+  .form-group .help {
+    color: #666666; }
 
 .radio,
 .checkbox {
   position: relative;
-  display: block;
-}
+  display: block; }
 
 .radio, .checkbox-inline, .radio-inline, .checkbox {
-  margin-top: 7px;
-}
-.radio label, .checkbox-inline label, .radio-inline label, .checkbox label {
-  min-height: 20px;
-  padding-left: 20px;
-  margin-bottom: 0;
-  font-weight: normal;
-  cursor: pointer;
-}
+  margin-top: 7px; }
+  .radio label, .checkbox-inline label, .radio-inline label, .checkbox label {
+    min-height: 20px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer; }
 
 .radio input[type="radio"],
 .radio-inline input[type="radio"],
@@ -78,46 +67,37 @@ IMPORT
 .checkbox-inline input[type="checkbox"] {
   position: absolute;
   margin-top: 4px;
-  margin-left: -20px;
-}
+  margin-left: -20px; }
 
 /***********表单状态**************/
 .has-success .form-control {
   border-color: #3c763d;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-}
-.has-success .form-control:focus {
-  border-color: #2b542c;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
-}
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
+  .has-success .form-control:focus {
+    border-color: #2b542c;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168; }
 
 .has-success-span {
-  color: #3c763d;
-}
+  color: #3c763d; }
 
 .has-error .form-control {
   border-color: #a94442;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-}
-.has-error .form-control:focus {
-  border-color: #843534;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
-}
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
+  .has-error .form-control:focus {
+    border-color: #843534;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483; }
 
 .has-error-span {
-  color: #a94442;
-}
+  color: #a94442; }
 
 .has-feedback .form-control {
-  padding-right: 30px;
-}
+  padding-right: 30px; }
 .has-feedback .form-control-feedback {
-  top: 9px;
-}
+  top: 9px; }
 
 .form-control-feedback {
   position: absolute;
@@ -128,7 +108,4 @@ IMPORT
   height: 34px;
   line-height: 34px;
   text-align: center;
-  pointer-events: none;
-}
-
-/*# sourceMappingURL=form.css.map */
+  pointer-events: none; }

@@ -9,17 +9,11 @@ IMPORT
 */
 *:-moz-placeholder {
   color: #999;
-  opacity: 1;
-}
+  opacity: 1; }
 *::-moz-placeholder {
   color: #999;
-  opacity: 1;
-}
+  opacity: 1; }
 *:-ms-input-placeholder {
-  color: #999;
-}
+  color: #999; }
 *::-webkit-input-placeholder {
-  color: #999;
-}
-
-/*# sourceMappingURL=placeholder.css.map */
+  color: #999; }
