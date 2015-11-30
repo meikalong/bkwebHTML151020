@@ -1,0 +1,44 @@
+@charset "UTF-8";
+@charset "UTF-8";
+.top:before, .header:before, .column:before, .photo_wall:before, .content-msg:before, .content-msg .content-title:before, .content-msg .content-info:before, .top:after, .header:after, .column:after, .photo_wall:after, .content-msg:after, .content-msg .content-title:after, .content-msg .content-info:after { display: table; content: ""; clear: both }
+body { min-width: 1200px }
+.top { width: 100%; background-color: #F5F5F5 }
+.top .log { display: block; float: left; width: 140px; padding: 0px 30px 0px 30px }
+.top ul { float: left }
+.top a { color: black; font-weight: bolder }
+.top .login { float: right; line-height: 3; padding-right: 40px }
+.top .login a { text-decoration: none }
+.top .login a:hover { color: blue }
+.header { background: -webkit-linear-gradient(top, #4CC873, #13C0A3); background: -o-linear-gradient(bottom, #4CC873, #13C0A3); background: -moz-linear-gradient(bottom, #4CC873, #13C0A3); background: linear-gradient(to bottom, #4CC873, #13C0A3); width: 100%; height: 150px }
+.header .img { text-align: center; padding-top: 35px }
+.header .log { width: 150px }
+.header .search { padding-top: 60px }
+.header .search input[type="text"] { height: 50px; border-radius: 30px }
+.header .search input[type="button"] { height: 50px }
+.column { width: 100%; background-color: #00BCD4; padding-left: 30px }
+.column a { font-weight: bold; color: white }
+.column li { margin: 0px }
+.column li a:hover { background-color: #555555; border-radius: 0px }
+.photo_wall { width: 100% }
+.photo_wall .photo { height: 350px }
+.reservations { padding-top: 20px; padding-bottom: 20px }
+.dates{height: 360px;overflow: hidden;margin-top: 10px}
+.date td { height: 60px }
+.date .enable { cursor: pointer }
+.date .selected { border: 2px solid #FF7866 }
+.date .date_td { width: 59px; height: 51px }
+.date td p { font-size: 10px }
+.date .disabled, .date .disabled .price, .date .disabled .remainder { cursor: not-allowed; color: #ccc }
+.date td .price { color: #FF7866 }
+.date td .remainder { color: #339900 }
+.footer { width: 100%; height: 250px; background-color: #333333; padding-top: 50px; padding-left: 130px; position: relative }
+.footer ul li { padding-bottom: 10px }
+.footer ul li:first-child { padding-bottom: 15px; font-weight: 700 }
+.footer li a { color: white; font-size: 15px; display: inline }
+.footer li a:hover { background-color: transparent; color: #31a5e7 }
+.footer li span { color: white; font-size: 15px; padding: 10px }
+.footer .app { position: absolute; top: 0px; right: 130px; text-align: center }
+.footer .app .icon { font-size: 30px; width: 60px; height: 100px; display: block; padding-top: 15px; color: white; background-image: url("../../../img/app-bg.png") }
+.footer .app .icon span { display: block }
+.footer .app .icon .icon-app { font: 12px/1.5 "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", \5b8b\4f53, sans-serif; font-size: 16px; padding-top: 10px }
+.footer .travel-msg { font: 12px/1.5 "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", \5b8b\4f53, sans-serif; color: white }

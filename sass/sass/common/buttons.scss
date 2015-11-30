@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+/**********按钮集合**********/
 .btn-group {
 	.btn:not(:first-child):not(:last-child), button:not(:first-child):not(:last-child) {
 		border-radius: 0;

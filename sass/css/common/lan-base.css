@@ -1,34 +1,72 @@
-@charset "UTF-8";
 /*
-IMPORT
-...................mixin.scss;鍑芥暟闆嗕腑鏂囦欢
-...................variable.scss;鍙橀噺闆嗕腑鏂囦欢
-...................tag.scss;鏍囩闆嗕腑鏂囦欢
-...................raster.scss;鏍呮牸闆嗕腑鏂囦欢
+Error: Undefined variable: "$lan_percent_width".
+        on line 21 of F:\工作记录\笔记\javaweb前台\管理网站设计\管理网站设计151020\sass\sass\common\lan-base.scss, in `lan'
+        from line 21 of F:\工作记录\笔记\javaweb前台\管理网站设计\管理网站设计151020\sass\sass\common\lan-base.scss
 
+16: 	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+17:   	box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.175);
+18: }
+19: 
+20: .lan-base-left{
+21: 	@include lan($lan_percent_width,left);
+22: }
+23: 
+24: .lan-base-right{
+25: 	@include lan($lan_percent_width,right);
+26: }
+
+Backtrace:
+F:\工作记录\笔记\javaweb前台\管理网站设计\管理网站设计151020\sass\sass\common\lan-base.scss:21:in `lan'
+F:\工作记录\笔记\javaweb前台\管理网站设计\管理网站设计151020\sass\sass\common\lan-base.scss:21
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/script/tree/variable.rb:49:in `_perform'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/script/tree/node.rb:50:in `perform'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:344:in `block (2 levels) in visit_mixin'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:344:in `map'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:344:in `block in visit_mixin'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:98:in `block in with_mixin'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:98:in `with_mixin'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:336:in `visit_mixin'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `map'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `map'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:157:in `visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:8:in `visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:36:in `css_tree'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:20:in `render'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:268:in `render'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:404:in `run'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:62:in `process_result'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:52:in `parse'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:19:in `parse!'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/bin/sass:13:in `<top (required)>'
+E:/Program Files/Koala/bin/sass:18:in `load'
+E:/Program Files/Koala/bin/sass:18:in `<main>'
 */
-/*******lan-base********/
-.lan-base {
-  border: 1px solid #ccc;
-  margin-top: 20px;
-  cursor: pointer;
-  border-radius: 2px;
-  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.175); }
-  .lan-base:hover {
-    background-color: #ECECEC; }
-
-@media (min-width: 768px) {
-  .lan-base-left {
-    width: 48%;
-    float: left; } }
-
-@media (min-width: 768px) {
-  .lan-base-right {
-    width: 48%;
-    float: right; } }
-
-.lan-content {
-  margin-left: 30px; }
-  .lan-content .lan-small-content {
-    font-size: 18px; }
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$lan_percent_width\".\A         on line 21 of F:\工作记录\笔记\javaweb前台\管理网站设计\管理网站设计151020\sass\sass\common\lan-base.scss, in `lan'\A         from line 21 of F:\工作记录\笔记\javaweb前台\管理网站设计\管理网站设计151020\sass\sass\common\lan-base.scss\A \A 16: 	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);\A 17:   	box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.175);\A 18: }\A 19: \A 20: .lan-base-left{\A 21: 	@include lan($lan_percent_width,left);\A 22: }\A 23: \A 24: .lan-base-right{\A 25: 	@include lan($lan_percent_width,right);\A 26: }"; }

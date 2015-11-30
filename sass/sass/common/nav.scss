@@ -1,106 +1,142 @@
 @charset "UTF-8";
+// @import "./import.scss";
 
-@import "./import.scss";
-
-%display{
-	.display{
-		a{
+/**********导航**********/
+%display {
+	.display {
+		a {
 			color: #666666;
-			&:hover{
+
+			&:hover {
 				background-color: transparent;
 				text-decoration: none;
-	  			border-color: transparent transparent transparent;
-	  			cursor: not-allowed;
+				border-color: transparent transparent transparent;
+				cursor: not-allowed;
 			}
 		}
 	}
 }
-
-@mixin li($border-radius:4px 4px 4px 4px){
-	li{
+@mixin li($border-radius:4px 4px 4px 4px) {
+	li {
 		margin-bottom: -1px;
 		float: left;
-	  	a{
-	  		border-radius: $border-radius;
-	  		margin-right: 2px;
-	  	}
+
+		a {
+			border-radius: $border-radius;
+			margin-right: 2px;
+		}
 	}
 }
-
-@mixin navbar-nav(){
+@mixin navbar-nav() {
 	@include li();
-	.active{
-		a{
+
+	.active {
+		a {
 			color: #333333;
 			border-radius: 4px 4px 4px 4px;
-			border:1px solid #DDDDDD;
+			border: 1px solid #DDDDDD;
 			background-color: #428BCA;
-			&:hover{
+
+			&:hover {
 				background-color: #428BCA;
-	  			cursor: default;
+				cursor: default;
 			}
 		}
 	}
 }
-
-@mixin nav-tabs(){
+@mixin nav-tabs() {
 	@include li(4px 4px 0 0);
 	border-bottom: 1px solid #DDDDDD;
-	.active{
-		a{
+
+	.active {
+		a {
 			color: #333333;
 			background-color: white;
 			border-radius: 4px 4px 0 0;
-			border:1px solid #DDDDDD;
-	  		border-bottom-color: white;
-			&:hover{
+			border: 1px solid #DDDDDD;
+			border-bottom-color: white;
+
+			&:hover {
 				background-color: white;
 				text-decoration: none;
 				border-color: #DDDDDD #DDDDDD white #DDDDDD;
-	  			cursor: default;
+				cursor: default;
 			}
 		}
 	}
-	a{
-		&:hover{
-			border-bottom:1px solid #DDDDDD;
+	a {
+		&:hover {
+			border-bottom: 1px solid #DDDDDD;
 		}
 	}
 }
-
 .nav {
 	@extend %beforeAndAfter;
 	display: block;
-  	padding-left: 0;
-  	margin-bottom: 0;
-  	list-style: none;
-  	li {
-  		display: block;
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style: none;
+
+	li {
+		display: block;
 		position: relative;
-	  	a {
-	  		position: relative;
-		  	display: block;
-		  	padding: 10px 10px;
-		  	text-decoration: none;
+
+		a {
+			position: relative;
+			display: block;
+			padding: 10px 10px;
+			text-decoration: none;
 			line-height: 1.42857143;
 			border: 1px solid transparent;
-		  	&:hover{
-		  		text-decoration: none;
-  				background-color: #eee;
-		  	}
+
+			&:hover {
+				text-decoration: none;
+				background-color: #eee;
+			}
 		}
 	}
 	@extend %display;
 }
-
-.nav-tabs{
-	@media screen and (min-width: $screen-min-width) {
+.nav-tabs {
+	@media screen and (min-width:$screen-min-width) {
 		@include nav-tabs();
 	}
 }
-
-.navbar-nav{
-	@media screen and (min-width: $screen-min-width){
+.navbar-nav {
+	@media screen and (min-width:$screen-min-width) {
 		@include navbar-nav();
 	}
+}
+.nav-tabs-cell {
+	@include li(0px 0px 0px 0px);
+
+	li.display a{
+		&:hover{
+			color: #636363;
+		}
+	}
+
+	.display{
+		font-weight: normal;
+	}
+
+	li a {
+		color: #636363;
+		border: 0px;
+
+		&:hover {
+			background-color: transparent;
+			color: #9C79D4;
+			border-bottom: 2px solid #9C79D4;
+		}
+	}
+
+	.active a {
+		color: #9C79D4;
+		border-bottom: 2px solid #9C79D4;
+	}
+}
+
+.nav-weight{
+	font-weight: 600;
 }

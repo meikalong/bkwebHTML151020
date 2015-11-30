@@ -1,5 +1,7 @@
 @charset "UTF-8";
-@import "./import.scss";
+// @import "./import.scss";
+
+/**********输入框内部placeholder**********/
 
 * {
 	&:-moz-placeholder{//Mozilla Firefox 4-18使用伪类

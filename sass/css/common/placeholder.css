@@ -1,19 +1,6 @@
 @charset "UTF-8";
-/*
-IMPORT
-...................mixin.scss;函数集中文件
-...................variable.scss;变量集中文件
-...................tag.scss;标签集中文件
-...................raster.scss;栅格集中文件
-
-*/
-*:-moz-placeholder {
-  color: #999;
-  opacity: 1; }
-*::-moz-placeholder {
-  color: #999;
-  opacity: 1; }
-*:-ms-input-placeholder {
-  color: #999; }
-*::-webkit-input-placeholder {
-  color: #999; }
+/**********输入框内部placeholder**********/
+*:-moz-placeholder { color: #999; opacity: 1; }
+*::-moz-placeholder { color: #999; opacity: 1; }
+*:-ms-input-placeholder { color: #999; }
+*::-webkit-input-placeholder { color: #999; }

@@ -1,79 +1,68 @@
-@charset "UTF-8";
 /*
-IMPORT
-...................mixin.scss;鍑芥暟闆嗕腑鏂囦欢
-...................variable.scss;鍙橀噺闆嗕腑鏂囦欢
-...................tag.scss;鏍囩闆嗕腑鏂囦欢
-...................raster.scss;鏍呮牸闆嗕腑鏂囦欢
+Error: Undefined variable: "$screen-min-width".
+        on line 101 of F:\工作记录\笔记\javaweb前台\管理网站设计\管理网站设计151020\sass\sass\common\nav.scss
 
+96: 		}
+97: 	}
+98: 	@extend %display;
+99: }
+100: .nav-tabs {
+101: 	@media screen and (min-width:$screen-min-width) {
+102: 		@include nav-tabs();
+103: 	}
+104: }
+105: .navbar-nav {
+106: 	@media screen and (min-width:$screen-min-width) {
+
+Backtrace:
+F:\工作记录\笔记\javaweb前台\管理网站设计\管理网站设计151020\sass\sass\common\nav.scss:101
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/script/tree/variable.rb:49:in `_perform'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/script/tree/node.rb:50:in `perform'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:526:in `block in run_interp_no_strip'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:524:in `map'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:524:in `run_interp_no_strip'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:531:in `run_interp'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:499:in `visit_media'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `map'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `map'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:157:in `visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:8:in `visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:36:in `css_tree'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:20:in `render'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:268:in `render'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:404:in `run'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:62:in `process_result'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:52:in `parse'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:19:in `parse!'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/bin/sass:13:in `<top (required)>'
+E:/Program Files/Koala/bin/sass:18:in `load'
+E:/Program Files/Koala/bin/sass:18:in `<main>'
 */
-.nav:before, .nav:after {
-  display: table;
-  content: "";
-  clear: both; }
-
-.nav .display a {
-  color: #666666; }
-  .nav .display a:hover {
-    background-color: transparent;
-    text-decoration: none;
-    border-color: transparent transparent transparent;
-    cursor: not-allowed; }
-
-.nav {
-  display: block;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none; }
-  .nav li {
-    display: block;
-    position: relative; }
-    .nav li a {
-      position: relative;
-      display: block;
-      padding: 10px 10px;
-      text-decoration: none;
-      line-height: 1.42857143;
-      border: 1px solid transparent; }
-      .nav li a:hover {
-        text-decoration: none;
-        background-color: #eee; }
-
-@media screen and (min-width: 768px) {
-  .nav-tabs {
-    border-bottom: 1px solid #DDDDDD; }
-    .nav-tabs li {
-      margin-bottom: -1px;
-      float: left; }
-      .nav-tabs li a {
-        border-radius: 4px 4px 0 0;
-        margin-right: 2px; }
-    .nav-tabs .active a {
-      color: #333333;
-      background-color: white;
-      border-radius: 4px 4px 0 0;
-      border: 1px solid #DDDDDD;
-      border-bottom-color: white; }
-      .nav-tabs .active a:hover {
-        background-color: white;
-        text-decoration: none;
-        border-color: #DDDDDD #DDDDDD white #DDDDDD;
-        cursor: default; }
-    .nav-tabs a:hover {
-      border-bottom: 1px solid #DDDDDD; } }
-
-@media screen and (min-width: 768px) {
-  .navbar-nav li {
-    margin-bottom: -1px;
-    float: left; }
-    .navbar-nav li a {
-      border-radius: 4px 4px 4px 4px;
-      margin-right: 2px; }
-  .navbar-nav .active a {
-    color: #333333;
-    border-radius: 4px 4px 4px 4px;
-    border: 1px solid #DDDDDD;
-    background-color: #428BCA; }
-    .navbar-nav .active a:hover {
-      background-color: #428BCA;
-      cursor: default; } }
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$screen-min-width\".\A         on line 101 of F:\工作记录\笔记\javaweb前台\管理网站设计\管理网站设计151020\sass\sass\common\nav.scss\A \A 96: 		}\A 97: 	}\A 98: 	@extend %display;\A 99: }\A 100: .nav-tabs {\A 101: 	@media screen and (min-width:$screen-min-width) {\A 102: 		@include nav-tabs();\A 103: 	}\A 104: }\A 105: .navbar-nav {\A 106: 	@media screen and (min-width:$screen-min-width) {"; }

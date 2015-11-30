@@ -1,313 +1,61 @@
-@charset "UTF-8";
 /*
-IMPORT
-...................mixin.scss;鍑芥暟闆嗕腑鏂囦欢
-...................variable.scss;鍙橀噺闆嗕腑鏂囦欢
-...................tag.scss;鏍囩闆嗕腑鏂囦欢
-...................raster.scss;鏍呮牸闆嗕腑鏂囦欢
+Error: Undefined variable: "$col-number".
+        on line 16 of F:\工作记录\笔记\javaweb前台\管理网站设计\管理网站设计151020\sass\sass\common\raster.scss, in `commonCreate_col'
+        from line 16 of F:\工作记录\笔记\javaweb前台\管理网站设计\管理网站设计151020\sass\sass\common\raster.scss
 
+11:  	min-height: 1px;
+12: 	@extend %beforeAndAfter;
+13: 
+14: }
+15: 
+16: @include commonCreate_col($col-number);
+17: 
+18: @media (min-width: $screen-min-width) {
+19: 	@include create_col($col-number);
+20: 	@include create_col_push($col-number);
+21: }
+
+Backtrace:
+F:\工作记录\笔记\javaweb前台\管理网站设计\管理网站设计151020\sass\sass\common\raster.scss:16:in `commonCreate_col'
+F:\工作记录\笔记\javaweb前台\管理网站设计\管理网站设计151020\sass\sass\common\raster.scss:16
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/script/tree/variable.rb:49:in `_perform'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/script/tree/node.rb:50:in `perform'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:344:in `block (2 levels) in visit_mixin'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:344:in `map'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:344:in `block in visit_mixin'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:98:in `block in with_mixin'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:98:in `with_mixin'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:336:in `visit_mixin'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `map'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:157:in `visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:8:in `visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:36:in `css_tree'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:20:in `render'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:268:in `render'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:404:in `run'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:62:in `process_result'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:52:in `parse'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:19:in `parse!'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/bin/sass:13:in `<top (required)>'
+E:/Program Files/Koala/bin/sass:18:in `load'
+E:/Program Files/Koala/bin/sass:18:in `<main>'
 */
-.row:before, .row:after {
-  display: table;
-  content: "";
-  clear: both; }
-
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px; }
-
-/*******鏍呮牸********/
-.row {
-  width: 100%;
-  min-height: 1px; }
-
-@media (min-width: 768px) {
-  .col-1 {
-    float: left;
-    display: block;
-    width: 8.33333%; }
-
-  .col-2 {
-    float: left;
-    display: block;
-    width: 16.66667%; }
-
-  .col-3 {
-    float: left;
-    display: block;
-    width: 25%; }
-
-  .col-4 {
-    float: left;
-    display: block;
-    width: 33.33333%; }
-
-  .col-5 {
-    float: left;
-    display: block;
-    width: 41.66667%; }
-
-  .col-6 {
-    float: left;
-    display: block;
-    width: 50%; }
-
-  .col-7 {
-    float: left;
-    display: block;
-    width: 58.33333%; }
-
-  .col-8 {
-    float: left;
-    display: block;
-    width: 66.66667%; }
-
-  .col-9 {
-    float: left;
-    display: block;
-    width: 75%; }
-
-  .col-10 {
-    float: left;
-    display: block;
-    width: 83.33333%; }
-
-  .col-11 {
-    float: left;
-    display: block;
-    width: 91.66667%; }
-
-  .col-12 {
-    float: left;
-    display: block;
-    width: 100%; }
-
-  .col-push-1 {
-    margin-left: 8.33333%; }
-
-  .col-push-2 {
-    margin-left: 16.66667%; }
-
-  .col-push-3 {
-    margin-left: 25%; }
-
-  .col-push-4 {
-    margin-left: 33.33333%; }
-
-  .col-push-5 {
-    margin-left: 41.66667%; }
-
-  .col-push-6 {
-    margin-left: 50%; }
-
-  .col-push-7 {
-    margin-left: 58.33333%; }
-
-  .col-push-8 {
-    margin-left: 66.66667%; }
-
-  .col-push-9 {
-    margin-left: 75%; }
-
-  .col-push-10 {
-    margin-left: 83.33333%; }
-
-  .col-push-11 {
-    margin-left: 91.66667%; }
-
-  .col-push-12 {
-    margin-left: 100%; } }
-@media (min-width: 992px) {
-  .col-1 {
-    float: left;
-    display: block;
-    width: 8.33333%; }
-
-  .col-2 {
-    float: left;
-    display: block;
-    width: 16.66667%; }
-
-  .col-3 {
-    float: left;
-    display: block;
-    width: 25%; }
-
-  .col-4 {
-    float: left;
-    display: block;
-    width: 33.33333%; }
-
-  .col-5 {
-    float: left;
-    display: block;
-    width: 41.66667%; }
-
-  .col-6 {
-    float: left;
-    display: block;
-    width: 50%; }
-
-  .col-7 {
-    float: left;
-    display: block;
-    width: 58.33333%; }
-
-  .col-8 {
-    float: left;
-    display: block;
-    width: 66.66667%; }
-
-  .col-9 {
-    float: left;
-    display: block;
-    width: 75%; }
-
-  .col-10 {
-    float: left;
-    display: block;
-    width: 83.33333%; }
-
-  .col-11 {
-    float: left;
-    display: block;
-    width: 91.66667%; }
-
-  .col-12 {
-    float: left;
-    display: block;
-    width: 100%; }
-
-  .col-push-1 {
-    margin-left: 8.33333%; }
-
-  .col-push-2 {
-    margin-left: 16.66667%; }
-
-  .col-push-3 {
-    margin-left: 25%; }
-
-  .col-push-4 {
-    margin-left: 33.33333%; }
-
-  .col-push-5 {
-    margin-left: 41.66667%; }
-
-  .col-push-6 {
-    margin-left: 50%; }
-
-  .col-push-7 {
-    margin-left: 58.33333%; }
-
-  .col-push-8 {
-    margin-left: 66.66667%; }
-
-  .col-push-9 {
-    margin-left: 75%; }
-
-  .col-push-10 {
-    margin-left: 83.33333%; }
-
-  .col-push-11 {
-    margin-left: 91.66667%; }
-
-  .col-push-12 {
-    margin-left: 100%; } }
-@media (min-width: 1200px) {
-  .col-1 {
-    float: left;
-    display: block;
-    width: 8.33333%; }
-
-  .col-2 {
-    float: left;
-    display: block;
-    width: 16.66667%; }
-
-  .col-3 {
-    float: left;
-    display: block;
-    width: 25%; }
-
-  .col-4 {
-    float: left;
-    display: block;
-    width: 33.33333%; }
-
-  .col-5 {
-    float: left;
-    display: block;
-    width: 41.66667%; }
-
-  .col-6 {
-    float: left;
-    display: block;
-    width: 50%; }
-
-  .col-7 {
-    float: left;
-    display: block;
-    width: 58.33333%; }
-
-  .col-8 {
-    float: left;
-    display: block;
-    width: 66.66667%; }
-
-  .col-9 {
-    float: left;
-    display: block;
-    width: 75%; }
-
-  .col-10 {
-    float: left;
-    display: block;
-    width: 83.33333%; }
-
-  .col-11 {
-    float: left;
-    display: block;
-    width: 91.66667%; }
-
-  .col-12 {
-    float: left;
-    display: block;
-    width: 100%; }
-
-  .col-push-1 {
-    margin-left: 8.33333%; }
-
-  .col-push-2 {
-    margin-left: 16.66667%; }
-
-  .col-push-3 {
-    margin-left: 25%; }
-
-  .col-push-4 {
-    margin-left: 33.33333%; }
-
-  .col-push-5 {
-    margin-left: 41.66667%; }
-
-  .col-push-6 {
-    margin-left: 50%; }
-
-  .col-push-7 {
-    margin-left: 58.33333%; }
-
-  .col-push-8 {
-    margin-left: 66.66667%; }
-
-  .col-push-9 {
-    margin-left: 75%; }
-
-  .col-push-10 {
-    margin-left: 83.33333%; }
-
-  .col-push-11 {
-    margin-left: 91.66667%; }
-
-  .col-push-12 {
-    margin-left: 100%; } }
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$col-number\".\A         on line 16 of F:\工作记录\笔记\javaweb前台\管理网站设计\管理网站设计151020\sass\sass\common\raster.scss, in `commonCreate_col'\A         from line 16 of F:\工作记录\笔记\javaweb前台\管理网站设计\管理网站设计151020\sass\sass\common\raster.scss\A \A 11:  	min-height: 1px;\A 12: 	@extend %beforeAndAfter;\A 13: \A 14: }\A 15: \A 16: @include commonCreate_col($col-number);\A 17: \A 18: @media (min-width: $screen-min-width) {\A 19: 	@include create_col($col-number);\A 20: 	@include create_col_push($col-number);\A 21: }"; }
