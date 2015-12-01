@@ -1,57 +1,18 @@
 /*
-Error: Undefined variable: "$screen-min-width".
-        on line 101 of F:\工作记录\笔记\javaweb前台\管理网站设计\管理网站设计151020\sass\sass\common\nav.scss
+Sass::SyntaxError: ".nav" failed to @extend "%beforeAndAfter".
+The selector "%beforeAndAfter" was not found.
+Use "@extend %beforeAndAfter !optional" if the extend should be able to fail.
 
-96: 		}
-97: 	}
-98: 	@extend %display;
-99: }
-100: .nav-tabs {
-101: 	@media screen and (min-width:$screen-min-width) {
-102: 		@include nav-tabs();
-103: 	}
-104: }
-105: .navbar-nav {
-106: 	@media screen and (min-width:$screen-min-width) {
 
 Backtrace:
-F:\工作记录\笔记\javaweb前台\管理网站设计\管理网站设计151020\sass\sass\common\nav.scss:101
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/script/tree/variable.rb:49:in `_perform'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/script/tree/node.rb:50:in `perform'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:526:in `block in run_interp_no_strip'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:524:in `map'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:524:in `run_interp_no_strip'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:531:in `run_interp'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:499:in `visit_media'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `map'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `map'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:157:in `visit'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:8:in `visit'
-E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:36:in `css_tree'
+F:\工作记录\笔记\javaweb前台\管理网站设计\管理网站设计151020\sass\sass\common\nav.scss:74
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/extend.rb:61:in `block in check_extends_fired!'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util/subset_map.rb:106:in `block in each_value'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util/subset_map.rb:106:in `each'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util/subset_map.rb:106:in `each_value'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/extend.rb:50:in `check_extends_fired!'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/extend.rb:16:in `visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:39:in `css_tree'
 E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:20:in `render'
 E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:268:in `render'
 E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:404:in `run'
@@ -65,4 +26,4 @@ E:/Program Files/Koala/bin/sass:18:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$screen-min-width\".\A         on line 101 of F:\工作记录\笔记\javaweb前台\管理网站设计\管理网站设计151020\sass\sass\common\nav.scss\A \A 96: 		}\A 97: 	}\A 98: 	@extend %display;\A 99: }\A 100: .nav-tabs {\A 101: 	@media screen and (min-width:$screen-min-width) {\A 102: 		@include nav-tabs();\A 103: 	}\A 104: }\A 105: .navbar-nav {\A 106: 	@media screen and (min-width:$screen-min-width) {"; }
+  content: "Sass::SyntaxError: \".nav\" failed to @extend \"%beforeAndAfter\".\A The selector \"%beforeAndAfter\" was not found.\A Use \"@extend %beforeAndAfter !optional\" if the extend should be able to fail.\A "; }

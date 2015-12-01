@@ -62,37 +62,67 @@ require(["jquery", 'angular', 'ui-router', "app", "hoverdir", "slides", "imgLazy
 			$('#slides').slidesjs({
 				play: {
 					active: true,
-					auto: true,
+					auto: false,
 					interval: 2000,
 					swap: false
 				},
 				callback: {
 					loaded: function() {
 						$(".img_wall").each(function(i, v) {
-							console.log($(v).attr("src"));
 							$("ul.slidesjs-pagination li:eq(" + i + ")").find("a").css("background-image", "url(" + $(v).attr("src") + ")").text("");
 						});
 					}
 				}
 			});
 		});
-		$("#sale_date").load("./sale_date/date.html", function() {});
-		// $("#index_content_2").load("./content/zbss.html", function() {
-		// 	getList("#content_info_zbss");
-		// });
-		// $("#index_content_3").load("./content/cyhw.html", function() {
-		// 	getList("#content_info_cyhw");
-		// });
-		// $("#index_content_4").load("./content/ztdj.html", function() {
-		// 	getList("#content_info_ztdj");
-		// });
-		// $("#index_content_5").load("./content/kzxx.html", function() {
-		// 	getList("#content_info_kzxx");
-		// });
-		// $("#index_content_6").load("./content/cxzn.html", function() {
-		// 	getList("#content_info_cxzn");
-		// });
-		$("#sale_footer").load("./footer/footer.html");
-	})
+		$("#sale_date").load("./sale_date/date.html", function() {
+			// 日期table切换事件
+			$(".data-switch").on("click", "a", function() {
+				var $this = $(this);
+				$(".data-switch .active").removeClass("active");
+				$this.parent().addClass("active");
 
-})
+				$(".dates").find("table").addClass("hide");
+				$($this.attr("data-switch")).removeClass("hide");
+			});
+
+			// 选择时间事件
+			$(".dates").on("click","td.enable",function(){
+				var $this=$(this);
+				$(".dates").find("td.selected").removeClass("selected");
+				$this.addClass("selected");
+				var date=$this.attr('travel-data-date');
+				$("#date").val(date);
+			});
+
+			$("#sale_order").load("./sale_order/order.html", function() {
+				// 日期提醒事件
+				$(".select-data").click(function() {
+					sh_add(0, 100);
+				});
+
+			});
+		});
+
+		$("#sale_footer").load("./footer/footer.html");
+	});
+
+	// 闪烁提示
+	function sh_add(times, time) {
+		setTimeout(function() { //此处是过一定时间后自动消失 
+			if (times == 3) {
+				return;
+			}
+			$("#sale_date").addClass("remind");
+			sh_remove(times, time);
+		}, time);
+	}
+
+	function sh_remove(times, time) {
+		setTimeout(function() { //此处是过一定时间后自动消失 
+			$("#sale_date").removeClass("remind");
+			sh_add(times / 1 + 1, time);
+		}, time);
+	}
+
+});

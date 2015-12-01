@@ -1,7 +1,8 @@
 @charset "UTF-8";
 @charset "UTF-8";
-.top:before, .header:before, .column:before, .photo_wall:before, .content-msg:before, .content-msg .content-title:before, .content-msg .content-info:before, .top:after, .header:after, .column:after, .photo_wall:after, .content-msg:after, .content-msg .content-title:after, .content-msg .content-info:after { display: table; content: ""; clear: both }
-body { min-width: 1200px }
+.sale_container:before,.sale_container:after,.top:before, .header:before, .column:before, .photo_wall:before, .content-msg:before, .content-msg .content-title:before, .content-msg .content-info:before, .top:after, .header:after, .column:after, .photo_wall:after, .content-msg:after, .content-msg .content-title:after, .content-msg .content-info:after { display: table; content: ""; clear: both }
+body{ min-width: 1200px }
+.sale_container{width:1200px;margin: 0 auto;}
 .top { width: 100%; background-color: #F5F5F5 }
 .top .log { display: block; float: left; width: 140px; padding: 0px 30px 0px 30px }
 .top ul { float: left }
@@ -21,16 +22,39 @@ body { min-width: 1200px }
 .column li a:hover { background-color: #555555; border-radius: 0px }
 .photo_wall { width: 100% }
 .photo_wall .photo { height: 350px }
-.reservations { padding-top: 20px; padding-bottom: 20px }
+#sale_date.remind{border:1px solid red;}
+.reservations { padding: 20px 0px 20px 0px; }
 .dates{height: 360px;overflow: hidden;margin-top: 10px}
-.date td { height: 60px }
+.dates .hide{display: none;}
+.date td { height: 60px ;padding:0px;}
 .date .enable { cursor: pointer }
-.date .selected { border: 2px solid #FF7866 }
-.date .date_td { width: 59px; height: 51px }
+.date .selected div{ border: 2px solid #FF7866 }
+.date .date_td { width: 80px; height: 69px ;padding: 8px;border:2px solid transparent;}
 .date td p { font-size: 10px }
 .date .disabled, .date .disabled .price, .date .disabled .remainder { cursor: not-allowed; color: #ccc }
 .date td .price { color: #FF7866 }
 .date td .remainder { color: #339900 }
+.sale_order{margin-left: -30px;}
+.order_message{padding:0px 0px 10px 18px;}
+#sale_order .number span,#sale_order .number input{float: left;}
+#sale_order .number input{width: 50px;margin-right: 5px;}
+#sale_order .number span{padding: 7px;}
+#sale_order .form-group {margin-bottom: 15px;}
+.order_message .title{background-color: #FF125B;color: white}
+.order_message .title small{color: white;padding-left: 10px;}
+.order_message p{color: #666666;padding:4px 0px 4px 0px;}
+.order_message .subtitle{color: #333333}
+.mybtn-orange{background-color:#FF9419;color: #FFFFFF; width: 100px;height: 36px;}
+.mybtn-orange:hover{background-color:#FF6901;color: #FFFFFF}
+.recommend{padding-top: 15px;color: #FF6600}
+.recommend p{padding: 7px 0px 0px 0px;line-height: 28px;}
+#sale_order .promise {margin-bottom: 15px;}
+#sale_order .promise p{color: #333333;font-size: 10px;width: 110px;}
+#sale_order .promise p .icon{color: #75C6EF;padding-top: 3px;float: left;padding-right: 5px;}
+#sale_order .phone{padding-left: 40px;}
+#sale_order .phone p .icon{color: #FF9419;padding-top: 3px;float: left;padding-right: 5px;}
+#sale_order .phone .number{color: #FF9419;font-size: 15px;font-weight: 600;padding-left: 5px;}
+.more{width: 90%;height: 100px;margin:0 auto 20px auto;color: #666666;font-size: 20px;text-align: center;padding-top: 50px;padding-bottom:70px;border: 1px solid #666666;}
 .footer { width: 100%; height: 250px; background-color: #333333; padding-top: 50px; padding-left: 130px; position: relative }
 .footer ul li { padding-bottom: 10px }
 .footer ul li:first-child { padding-bottom: 15px; font-weight: 700 }

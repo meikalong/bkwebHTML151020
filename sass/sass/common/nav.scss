@@ -98,14 +98,10 @@
 	@extend %display;
 }
 .nav-tabs {
-	@media screen and (min-width:$screen-min-width) {
-		@include nav-tabs();
-	}
+	@include nav-tabs();
 }
 .navbar-nav {
-	@media screen and (min-width:$screen-min-width) {
-		@include navbar-nav();
-	}
+	@include navbar-nav();
 }
 .nav-tabs-cell {
 	@include li(0px 0px 0px 0px);
