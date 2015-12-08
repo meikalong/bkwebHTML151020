@@ -4,7 +4,6 @@
 .table tr { height: 37px; }
 .table td, .table th { padding: 8px; text-wrap: none; }
 
-.table-border { border: 1px solid red; }
 .table-border td, .table-border th { border: 1px solid #DDDDDD; text-align: left; }
 
 .table-hover tr:hover td { background-color: #F5F5F5; }

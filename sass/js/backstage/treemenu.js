@@ -38,8 +38,10 @@
 		})
 
 		jq(this).on("click","a[class^=func]",function(event){
-			jq(event.delegateTarget).find("a[class^=func]").css("background-color","");
-			jq(this).css("background-color","#0099CC");
+			var style={"background-color":"#0099CC","color":"#FFF1F8"};
+			var nostyle={"background-color":"","color":""};
+			jq(event.delegateTarget).find("a[class^=func]").css(nostyle);
+			jq(this).css(style);
 		})
 
 		return this;

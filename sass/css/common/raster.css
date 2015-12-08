@@ -1,7 +1,7 @@
 /*
 Error: Undefined variable: "$col-number".
-        on line 16 of F:\工作记录\笔记\javaweb前台\管理网站设计\管理网站设计151020\sass\sass\common\raster.scss, in `commonCreate_col'
-        from line 16 of F:\工作记录\笔记\javaweb前台\管理网站设计\管理网站设计151020\sass\sass\common\raster.scss
+        on line 16 of F:\bkweb\bkwebHTML151020\sass\sass\common\raster.scss, in `commonCreate_col'
+        from line 16 of F:\bkweb\bkwebHTML151020\sass\sass\common\raster.scss
 
 11:  	min-height: 1px;
 12: 	@extend %beforeAndAfter;
@@ -16,8 +16,8 @@ Error: Undefined variable: "$col-number".
 21: // }
 
 Backtrace:
-F:\工作记录\笔记\javaweb前台\管理网站设计\管理网站设计151020\sass\sass\common\raster.scss:16:in `commonCreate_col'
-F:\工作记录\笔记\javaweb前台\管理网站设计\管理网站设计151020\sass\sass\common\raster.scss:16
+F:\bkweb\bkwebHTML151020\sass\sass\common\raster.scss:16:in `commonCreate_col'
+F:\bkweb\bkwebHTML151020\sass\sass\common\raster.scss:16
 E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/script/tree/variable.rb:49:in `_perform'
 E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/script/tree/node.rb:50:in `perform'
 E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:344:in `block (2 levels) in visit_mixin'
@@ -58,4 +58,4 @@ E:/Program Files/Koala/bin/sass:18:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$col-number\".\A         on line 16 of F:\工作记录\笔记\javaweb前台\管理网站设计\管理网站设计151020\sass\sass\common\raster.scss, in `commonCreate_col'\A         from line 16 of F:\工作记录\笔记\javaweb前台\管理网站设计\管理网站设计151020\sass\sass\common\raster.scss\A \A 11:  	min-height: 1px;\A 12: 	@extend %beforeAndAfter;\A 13: \A 14: }\A 15: \A 16: @include commonCreate_col($col-number);\A 17: \A 18: // @media (min-width: $screen-min-width) {\A 19: // 	@include create_col($col-number);\A 20: // 	@include create_col_push($col-number);\A 21: // }"; }
+  content: "Error: Undefined variable: \"$col-number\".\A         on line 16 of F:\bkweb\bkwebHTML151020\sass\sass\common\raster.scss, in `commonCreate_col'\A         from line 16 of F:\bkweb\bkwebHTML151020\sass\sass\common\raster.scss\A \A 11:  	min-height: 1px;\A 12: 	@extend %beforeAndAfter;\A 13: \A 14: }\A 15: \A 16: @include commonCreate_col($col-number);\A 17: \A 18: // @media (min-width: $screen-min-width) {\A 19: // 	@include create_col($col-number);\A 20: // 	@include create_col_push($col-number);\A 21: // }"; }

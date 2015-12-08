@@ -255,7 +255,7 @@ $.extend($.fn, {
            /* var iframe = $('<iframe id="' + jerichotabiframe + '" name="' + jerichotabiframe + '" src="' + src + '" frameborder="0" scrolling="no" />')
                                         .css({ width: $(this).parent().width(), height: $(this).parent().height(), border: 0 })
                                             .appendTo($(this));*/
-             var iframe = $('<iframe id="' + jerichotabiframe + '" name="' + jerichotabiframe + '" src="' + src + '" frameborder="0" scrolling="auto" />')
+             var iframe = $('<iframe id="' + jerichotabiframe + '" name="' + jerichotabiframe + '" src="' + src + '" frameborder="0" scrolling="no" />')
                                         .css({ width: "100%", height: $(this).parent().height(), border: 0 })
                                             .appendTo($(this));
             //add a listener to the load event

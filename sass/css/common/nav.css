@@ -5,7 +5,7 @@ Use "@extend %beforeAndAfter !optional" if the extend should be able to fail.
 
 
 Backtrace:
-F:\工作记录\笔记\javaweb前台\管理网站设计\管理网站设计151020\sass\sass\common\nav.scss:74
+F:\bkweb\bkwebHTML151020\sass\sass\common\nav.scss:74
 E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/extend.rb:61:in `block in check_extends_fired!'
 E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util/subset_map.rb:106:in `block in each_value'
 E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util/subset_map.rb:106:in `each'
