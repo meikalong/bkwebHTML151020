@@ -77,3 +77,15 @@
     border-color: #2e6da4;
   }
 }
+
+.btn-yellow {
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+  &:hover, &:focus, .focus, &:active, .active{
+    color: #fff;
+    background-color: #eea236;
+    border-color: #eea236;
+    background-image: none;
+  }
+}
