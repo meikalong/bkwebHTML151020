@@ -33,8 +33,6 @@ $(function() {
 $(function() {
 	//创建树的特效
 	$("#content-left-menu").bkCreateTree();
-
-
 	// 页签的高度
 	var tabTitleHeight = 33;
 
@@ -61,30 +59,61 @@ $(function() {
 	});
 });
 
+(function() {
+	var leftWidth = 160;
+	// 左侧窗口大小
+	var tabTitleHeight = 33;
+	// 页签的高度
+	var htmlObj = $("html"),
+		mainObj = $("#content");
+	var headerObj = $("#header"),
+		footerObj = $("#footer");
+	var frameObj = $("#content-right, #content-right iframe");
 
-(function(){
-	var leftWidth = 160; // 左侧窗口大小
-		var tabTitleHeight = 33; // 页签的高度
-		var htmlObj = $("html"), mainObj = $("#content");
-		var headerObj = $("#header"), footerObj = $("#footer");
-		var frameObj = $("#content-right, #content-right iframe");
-		function wSize(){
-			var minHeight = 500, minWidth = 980;
-			var strs = getWindowSize().toString().split(",");
-			htmlObj.css({"overflow-x":strs[1] < minWidth ? "auto" : "hidden", "overflow-y":strs[0] < minHeight ? "auto" : "hidden"});
-			mainObj.css("width",strs[1] < minWidth ? minWidth - 10 : "auto");
-			frameObj.height((strs[0] < minHeight ? minHeight : strs[0]) - headerObj.height() - footerObj.height() - (strs[1] < minWidth ? 42 : 28));
-			$("#openClose").height($("#openClose").height() - 5);// <c:if test="${cookie.tabmode.value eq '1'}"> 
-			$(".jericho_tab iframe").height($("#content-right").height() - tabTitleHeight); // </c:if>
-		}
-		var getWindowSize = function(){
-			return ["Height","Width"].map(function(name){
-			  return window["inner"+name] ||
-				document.compatMode === "CSS1Compat" && document.documentElement[ "client" + name ] || document.body[ "client" + name ];
-			});
-		};
-		$(window).resize(function(){
-			wSize();
+	function wSize() {
+		var minHeight = 500,
+			minWidth = 980;
+		var strs = getWindowSize().toString().split(", ");
+
+		htmlObj.css({
+			"overflow-x": strs[1] < minWidth ? "auto" : "hidden",
+			"overflow-y": strs[0] < minHeight ? "auto" : "hidden"
 		});
+		mainObj.css("width", strs[1] < minWidth ? minWidth - 10 : "auto");
+		frameObj.height((strs[0] < minHeight ? minHeight : strs[0]) - headerObj.height() - footerObj.height() - (strs[1] < minWidth ? 42 : 28));
+		$(".jericho_tab iframe").height($("#content-right").height() - tabTitleHeight);
+		// </c: if>
+	}
+	var getWindowSize = function() {
+		return ["Height", "Width"].map(function(name) {
+			return window["inner" + name] ||
+				document.compatMode === "CSS1Compat" && document.documentElement["client" + name] || document.body["client" + name];
+		});
+	};
+
+	$(window).resize(function() {
 		wSize();
+	});
+	wSize();
+
+	$(function() {
+		$("#openClose").click(function() {
+			if ($("#openClose").hasClass("close")) {//打开
+				$(".content-left").css("width", "185px");
+				$("#openClose").removeClass("close");
+			} else {//关闭
+				$("#content-left-menu > li > a.menu-open").click();
+				$(".content-left").css("width", "42px");
+				$("#openClose").addClass("close");
+				$("#content-left-menu").find("ul").hide();
+			}
+		});
+
+		$(".content-left").on("click", "li", function() {
+			if ($("#openClose").hasClass("close")) {
+				$(".content-left").css("width", "185px");
+				$("#openClose").removeClass("close");
+			}
+		});
+	})
 })()

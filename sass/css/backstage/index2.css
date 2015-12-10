@@ -3,7 +3,7 @@
 IMPORT文件，通用导入功能
 
 */
-.head-left:before, .head-right:before, .content:before, .content-left-menu li:before, .footer:before, .head-left:after, .head-right:after, .content:after, .content-left-menu li:after, .footer:after { display: table; content: ""; clear: both; }
+.head-left:before, .head-right:before, .content:before, .openClose:before, .content-left-menu li:before, .footer:before, .head-left:after, .head-right:after, .content:after, .openClose:after, .content-left-menu li:after, .footer:after { display: table; content: ""; clear: both; }
 
 /* ********head部分开始******* */
 @media all and (max-width: 992px) { .footer { width: 992px; } }
@@ -37,7 +37,14 @@ IMPORT文件，通用导入功能
 .content { width: 100%; padding-top: 50px; }
 
 /********left开始****ps:主要就是树状机构*******/
-.content-left { position: fixed; background-color: #2E363F; height: 100%; width: 185px; top: 50px; left: 0px; }
+.content-left { position: fixed; background-color: #2E363F; height: 100%; width: 185px; top: 50px; left: 0px; overflow: hidden; }
+
+#openClose { width: 100%; height: 15px; background-color: #394555; cursor: pointer; }
+
+.openClose { margin: 0 auto; width: 15px; padding-top: 3px; }
+.openClose div { width: 2px; height: 10px; background-color: #AE9F92; margin-right: 2px; float: left; }
+
+.close .openClose div { height: 2px; width: 10px; margin-bottom: 2px; margin-left: 2px; float: none; }
 
 .content-left-menu { clear: both; width: 185px; }
 .content-left-menu li { position: relative; background-color: #2E363F; }
@@ -50,7 +57,7 @@ IMPORT文件，通用导入功能
 .content-left-menu li:last-child { border-bottom: 1px solid #1F262D; }
 .content-left-menu .menu-father { border-top: 1px solid #37414B; border-bottom: 1px solid #1F262D; }
 .content-left-menu .menu-father a:last-child { border-bottom: 10px solid #1F262D; }
-.content-left-menu .font-ico:first-child { padding-right: 8px; padding-left: 3px; }
+.content-left-menu .font-ico:first-child { padding-right: 10px; padding-left: 3px; }
 .content-left-menu .font-ico:last-child { position: absolute; right: 15px; top: 13px; }
 
 /********left结束***********/

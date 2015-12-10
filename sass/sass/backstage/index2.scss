@@ -108,9 +108,6 @@ $backstage_index_text_color: #939DA8;
 
 /* ********content部分开始******* */
 
-// .content, .content-left, .content-right {
-// 	height: 700px;
-// }
 .content {
 	@extend %beforeAndAfter;
 	width: 100%;
@@ -122,13 +119,41 @@ $backstage_index_text_color: #939DA8;
 	position: fixed;
 	background-color: #2E363F;
 	height: 100%;
-
-	// @media (max-width:$screen-mid-width) {
-	// 	width: 40px;
-	// }
 	width: $content-left-width;
 	top: $backstage_index_head;
 	left: 0px;
+	overflow: hidden;
+}
+#openClose {
+	width: 100%;
+	height: 15px;
+	background-color: #394555;
+	cursor: pointer;
+}
+.openClose {
+	margin: 0 auto;
+	width: 15px;
+	padding-top: 3px;
+	@extend %beforeAndAfter;
+
+	div {
+		width: 2px;
+		height: 10px;
+		background-color: #AE9F92;
+		margin-right: 2px;
+		float: left;
+	}
+}
+.close {
+	.openClose {
+		div {
+			height: 2px;
+			width: 10px;
+			margin-bottom: 2px;
+			margin-left: 2px;
+			float: none;
+		}
+	}
 }
 .content-left-menu {
 	clear: both;
@@ -139,9 +164,6 @@ $backstage_index_text_color: #939DA8;
 		position: relative;
 		background-color: #2E363F;
 
-		// @media (max-width:$screen-mid-width) {
-		// 	width: 40px;
-		// }
 		a {
 			color: $backstage_index_text_color;
 			position: relative;
@@ -186,7 +208,7 @@ $backstage_index_text_color: #939DA8;
 	}
 	.font-ico {
 		&:first-child {
-			padding-right: 8px;
+			padding-right: 10px;
 			padding-left: 3px;
 		}
 		&:last-child {
