@@ -34,12 +34,10 @@ IMPORT文件，通用导入功能
 
 /* ********head部分结束******* */
 /* ********content部分开始******* */
-.content, .content-left, .content-right { height: 700px; }
-
 .content { width: 100%; padding-top: 50px; }
 
 /********left开始****ps:主要就是树状机构*******/
-.content-left { position: fixed; background-color: #2E363F; width: 185px; top: 50px; left: 0px; }
+.content-left { position: fixed; background-color: #2E363F; height: 100%; width: 185px; top: 50px; left: 0px; }
 
 .content-left-menu { clear: both; width: 185px; }
 .content-left-menu li { position: relative; background-color: #2E363F; }
@@ -58,7 +56,6 @@ IMPORT文件，通用导入功能
 /********left结束***********/
 /************right开始***********/
 .content-right { padding-left: 185px; width: 100%; }
-@media all and (max-width: 992px) { .content-right { padding-left: 41px; } }
 
 /************right结束***********/
 /* ********content部分结束******* */

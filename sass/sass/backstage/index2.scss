@@ -108,9 +108,9 @@ $backstage_index_text_color: #939DA8;
 
 /* ********content部分开始******* */
 
-.content, .content-left, .content-right {
-	height: 700px;
-}
+// .content, .content-left, .content-right {
+// 	height: 700px;
+// }
 .content {
 	@extend %beforeAndAfter;
 	width: 100%;
@@ -121,6 +121,7 @@ $backstage_index_text_color: #939DA8;
 .content-left {
 	position: fixed;
 	background-color: #2E363F;
+	height: 100%;
 
 	// @media (max-width:$screen-mid-width) {
 	// 	width: 40px;
@@ -201,10 +202,6 @@ $backstage_index_text_color: #939DA8;
 /************right开始***********/
 .content-right {
 	padding-left: $content-left-width;
-
-	@media all and (max-width:$screen-mid-width) {
-		padding-left: 41px;
-	}
 	width: 100%;
 }
 
