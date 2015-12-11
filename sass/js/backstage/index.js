@@ -2,31 +2,15 @@ $(function() {
 	//用户信息下拉框部分
 	var user_msg_dropmenu;
 
-	$("#user-msg").hover(function() {
+	$(".user-msg").hover(function() {//鼠标移入
 		clearTimeout(user_msg_dropmenu);
-		$("#user-msg>.img").css("background-image", 'url("../../img/portlet-expand-icon.png")');
-		$("#user-msg").css("background-color", '#414D5C');
 		$("#user-msg-dropmenu").show();
-	}, function() {
-		clearTimeout(user_msg_dropmenu);
-
-		user_msg_dropmenu = setTimeout(function() {
-			$("#user-msg>.img").css("background-image", 'url("../../img/portlet-collapse-icon.png")');
-			$("#user-msg").css("background-color", '');
+		$("#user-msg").css("color","#fff");
+	}, function() {//鼠标移出
+		 user_msg_dropmenu=setTimeout(function() {
 			$("#user-msg-dropmenu").hide();
-		}, 500);
-	});
-
-	$("#user-msg-dropmenu").hover(function() {
-		clearTimeout(user_msg_dropmenu);
-	}, function() {
-		clearTimeout(user_msg_dropmenu);
-
-		user_msg_dropmenu = setTimeout(function() {
-			$("#user-msg>.img").css("background-image", 'url("../../img/portlet-collapse-icon.png")');
-			$("#user-msg").css("background-color", '');
-			$("#user-msg-dropmenu").hide();
-		}, 500);
+			$("#user-msg").css("color","");
+		}, 1000);
 	});
 });
 
@@ -60,8 +44,6 @@ $(function() {
 });
 
 (function() {
-	var leftWidth = 160;
-	// 左侧窗口大小
 	var tabTitleHeight = 33;
 	// 页签的高度
 	var htmlObj = $("html"),
@@ -69,20 +51,18 @@ $(function() {
 	var headerObj = $("#header"),
 		footerObj = $("#footer");
 	var frameObj = $("#content-right, #content-right iframe");
-
 	function wSize() {
 		var minHeight = 500,
 			minWidth = 980;
-		var strs = getWindowSize().toString().split(", ");
+		var strs = getWindowSize().toString().split(",");
 
 		htmlObj.css({
 			"overflow-x": strs[1] < minWidth ? "auto" : "hidden",
 			"overflow-y": strs[0] < minHeight ? "auto" : "hidden"
 		});
 		mainObj.css("width", strs[1] < minWidth ? minWidth - 10 : "auto");
-		frameObj.height((strs[0] < minHeight ? minHeight : strs[0]) - headerObj.height() - footerObj.height() - (strs[1] < minWidth ? 42 : 28));
+		frameObj.height((strs[0] < minHeight ? minHeight : strs[0]) - headerObj.height()*2 - footerObj.height() );
 		$(".jericho_tab iframe").height($("#content-right").height() - tabTitleHeight);
-		// </c: if>
 	}
 	var getWindowSize = function() {
 		return ["Height", "Width"].map(function(name) {
@@ -101,11 +81,13 @@ $(function() {
 			if ($("#openClose").hasClass("close")) {//打开
 				$(".content-left").css("width", "185px");
 				$("#openClose").removeClass("close");
+				$(".content-right").css("padding-left","185px");
 			} else {//关闭
 				$("#content-left-menu > li > a.menu-open").click();
 				$(".content-left").css("width", "42px");
 				$("#openClose").addClass("close");
 				$("#content-left-menu").find("ul").hide();
+				$(".content-right").css("padding-left","45px");
 			}
 		});
 
@@ -113,6 +95,7 @@ $(function() {
 			if ($("#openClose").hasClass("close")) {
 				$(".content-left").css("width", "185px");
 				$("#openClose").removeClass("close");
+				$(".content-right").css("padding-left","185px");
 			}
 		});
 	})

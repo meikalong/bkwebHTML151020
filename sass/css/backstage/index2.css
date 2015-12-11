@@ -18,26 +18,28 @@ IMPORT文件，通用导入功能
 .head-right { float: right; }
 
 .user-img { float: left; }
+.user-img img, .user-img span { width: 45px; height: 45px; }
+.user-img span { color: #ccc; font-size: 33px; background-color: #fff; text-align: center; line-height: 1.2; }
 
 .user-msg { height: 100%; text-align: center; position: relative; float: right; }
-.user-msg span { color: #939DA8; height: 50px; padding: 13px 50px 13px 30px; display: block; font-size: 15px; font-family: Braggadocio, Arial, verdana, Helvetica, sans-serif; position: relative; }
-.user-msg span:hover { cursor: pointer; }
-.user-msg span > .img { position: absolute; height: 20px; width: 14px; top: 15px; right: 25px; background-image: url("../../img/portlet-collapse-icon.png"); }
+.user-msg #user-msg { color: #939DA8; height: 50px; padding: 13px; margin-right: 30px; display: block; font-size: 15px; font-family: Braggadocio, Arial, verdana, Helvetica, sans-serif; position: relative; }
+.user-msg:hover { cursor: pointer; }
 
 .dropdown-menu { right: 9px; left: auto; top: 50px; }
 
 .user-msg-menu { display: none; }
+.user-msg-menu .dropdown-menu { min-width: 140px; }
 
-.user-msg-menu .dropdown-menu:before { position: absolute; top: -7px; right: 9px; display: inline-block; border-right: 7px solid transparent; border-bottom: 7px solid #ccc; border-left: 7px solid transparent; border-bottom-color: rgba(0, 0, 0, 0.2); content: ''; }
+.user-msg-menu .dropdown-menu:before { position: absolute; top: -7px; left: 9px; display: inline-block; border-right: 7px solid transparent; border-bottom: 7px solid #ccc; border-left: 7px solid transparent; border-bottom-color: rgba(0, 0, 0, 0.2); content: ''; }
 
-.user-msg-menu .dropdown-menu:after { position: absolute; top: -6px; right: 10px; display: inline-block; border-right: 6px solid transparent; border-bottom: 6px solid #fff; border-left: 6px solid transparent; content: ''; }
+.user-msg-menu .dropdown-menu:after { position: absolute; top: -6px; left: 10px; display: inline-block; border-right: 6px solid transparent; border-bottom: 6px solid #fff; border-left: 6px solid transparent; content: ''; }
 
 /* ********head部分结束******* */
 /* ********content部分开始******* */
-.content { width: 100%; padding-top: 50px; }
+.content { width: 100%; margin-top: 50px; position: relative; }
 
 /********left开始****ps:主要就是树状机构*******/
-.content-left { position: fixed; background-color: #2E363F; height: 100%; width: 185px; top: 50px; left: 0px; overflow: hidden; }
+.content-left { background-color: #2E363F; height: 100%; width: 185px; overflow: auto; position: absolute; }
 
 #openClose { width: 100%; height: 15px; background-color: #394555; cursor: pointer; }
 
@@ -67,7 +69,7 @@ IMPORT文件，通用导入功能
 /************right结束***********/
 /* ********content部分结束******* */
 /* ********footer部分结束******* */
-.footer { background-color: #CEDDFA; height: 60px; }
+.footer { background-color: #1F262D; height: 60px; text-align: center; line-height: 4.5; color: #fff; }
 
 /* ********footer部分结束******* */
 
