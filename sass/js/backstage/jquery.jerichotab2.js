@@ -113,11 +113,11 @@ $.extend($.fn, {
             </div>
             </div>
             */
-            var jerichotab = $('<div id="'+opts.uniqueId+'" class="jericho_tab"><div class="tab_pages" ><div class="tabs"><ul /></div></div><div class="tab_content"><div id="jerichotab_contentholder" class="content" /></div></div>')
+            var jerichotab = $('<div id="'+opts.uniqueId+'" class="jericho_tab"><div class="tab_pages" ><div class="tabs"><ul /></div></div><div class="tab_content"><div id="jerichotab_contentholder" class="_content" /></div></div>')
                                             .appendTo($(opts.renderTo));
             
             //apply contentcss to the contentholder
-            $('.tab_content>.content', jerichotab).css(opts.contentCss);
+            $('.tab_content>._content', jerichotab).css(opts.contentCss);
             
             //fill data
             $.fn.jerichoTab = {

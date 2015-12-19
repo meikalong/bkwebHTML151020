@@ -61,7 +61,7 @@ $(function() {
 			"overflow-y": strs[0] < minHeight ? "auto" : "hidden"
 		});
 		mainObj.css("width", strs[1] < minWidth ? minWidth - 10 : "auto");
-		frameObj.height((strs[0] < minHeight ? minHeight : strs[0]) - headerObj.height()*2 - footerObj.height() );
+		frameObj.height((strs[0] < minHeight ? minHeight : strs[0]) - headerObj.height() - footerObj.height() );
 		$(".jericho_tab iframe").height($("#content-right").height() - tabTitleHeight);
 	}
 	var getWindowSize = function() {

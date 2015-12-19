@@ -34,7 +34,6 @@
 .checkbox {
   position: relative;
   display: block;
-  // margin-bottom: 10px;
 }
 
 .radio,.checkbox-inline,.radio-inline,.checkbox{
@@ -112,4 +111,18 @@
   line-height: 34px;
   text-align: center;
   pointer-events: none;
+}
+
+/***********表单提示信息**************/
+.help-inline{
+	padding-top: 7px;
+	span{
+		margin-left: -25px;
+		color: red;
+		font-size: 13px;
+		font-weight: 600;
+	}
+	font{
+		font-size: 17px;
+	}
 }
