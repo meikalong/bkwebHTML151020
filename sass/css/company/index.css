@@ -47,3 +47,5 @@ p { font-size: 2em; margin: 0.5em 0 2em 0; }
 .head li input:hover + a { background-color: #414D5C; }
 .head li input[type="radio"] { position: absolute; top: 0px; left: 0px; opacity: 0; z-index: 1000; width: 100%; height: 100%; }
 .head li input[type="radio"]:hover { cursor: pointer; }
+
+/*# sourceMappingURL=index.css.map */

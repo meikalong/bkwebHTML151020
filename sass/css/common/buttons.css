@@ -6,4 +6,6 @@
 .btn-group .btn, .btn-group button { display: block; float: left; }
 
 .btn-group-justified { display: table; width: 100%; table-layout: fixed; border-collapse: separate; }
-.btn-group-justified .btn, .btn-group-justified .btn-group { display: table-cell; float: none; width: 100%; }
+.btn-group-justified .justified, .btn-group-justified .btn, .btn-group-justified .btn-group { display: table-cell; float: none; width: 100%; }
+
+/*# sourceMappingURL=buttons.css.map */
